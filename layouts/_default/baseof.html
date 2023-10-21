@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ block "title" . }}
+    <title>
+      {{ if .IsHome }}{{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} —
+      {{ . }}{{ end }}{{ else }}{{ .Title }} ::
+      {{ $.Site.Title }}{{ with $.Site.Params.Subtitle }} — {{ . }}{{ end }}{{ end }}
+    </title>
+  {{ end }}
+  {{ partial "head.html" . }}
+</head>
+<body class="w-full bg-slate-50">
+  <header class="flex flex-none justify-center">
+    {{ partial "header.html" . }}
+  </header>
+  <main class="flex flex-auto justify-center">
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer class="flex flex-none justify-center">
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>

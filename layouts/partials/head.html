@@ -1,0 +1,19 @@
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="{{ if .IsHome }}{{ $.Site.Params.Subtitle }}{{ else }}{{ .Summary | plainify }}{{ end }}"
+/>
+<meta
+  name="keywords"
+  content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
+
+<!-- Theme CSS (/static/main.css) -->
+<link rel="stylesheet" href="{{ "main.css" | relURL }}" />
+
+{{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}

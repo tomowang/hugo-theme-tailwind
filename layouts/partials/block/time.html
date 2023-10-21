@@ -1,0 +1,22 @@
+{{ if .Date }}
+  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+  {{ $dateHuman := .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
+  <div class="flex flex-row text-base">
+    <i class="h-6 w-6 flex-none">
+      {{ partial "icon" "calendar" }}
+    </i>
+    <time class="ml-2" datetime="{{ $dateMachine }}">
+      {{ $dateHuman }}
+    </time>
+  </div>
+  {{ end }}
+  {{ if $.Site.Params.ShowReadingTime }}
+  <div class="flex flex-row text-base ml-6">
+    <i class="h-6 w-6 flex-none">
+      {{ partial "icon" "hourglass-high" }}
+    </i>
+    <span class="ml-2">
+      {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
+    </span>
+  </div>
+{{ end }}

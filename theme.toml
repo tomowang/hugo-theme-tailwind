@@ -1,0 +1,28 @@
+name = 'Tailwind'
+license = 'MIT'
+licenselink = 'https://github.com/tomowang/hugo-theme-tailwind/blob/main/LICENSE'
+description = 'Clean card Hugo theme for blog, created by using tailwindcss'
+
+# The home page of the theme, where the source can be found
+homepage = 'https://github.com/tomowang/hugo-theme-tailwind'
+
+# If you have a running demo of the theme
+demosite = 'https://tomo.dev'
+
+version = "0.1.0"
+
+# Taxonomy terms
+tags = ['blog', 'tailwindcss', 'responsive', 'multilingual', 'dark', 'personal']
+features = [
+  "responsive",
+  "dark mode",
+  "table of contents",
+  "katex",
+  "tabler icons",
+]
+
+
+# If the theme has a single author
+[author]
+  name = 'Xiaoliang Wang'
+  homepage = 'https://tomo.dev'

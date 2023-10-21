@@ -1,0 +1,18 @@
+{{ if (or .Paginator.HasPrev .Paginator.HasNext) }}
+<div class="flex flex-row justify-center mt-6 gap-2">
+  {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}"
+      class="flex flex-row text-base font-semibold rounded-md bg-slate-200 p-2 pr-3">
+      <i class="h-6 w-6 flex-none mr-1">{{ partial "icon" "caret-left" }}</i>
+      <span>{{ $.Site.Params.NewerPosts | default "Newer posts" }}</span>
+    </a>
+  {{ end }}
+  {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}"
+      class="flex flex-row text-base font-semibold rounded-md bg-slate-200 p-2 pl-3">
+      <span>{{ $.Site.Params.OlderPosts | default "Older posts" }}</span>
+      <i class="h-6 w-6 flex-none ml-1">{{ partial "icon" "caret-right" }}</i>
+    </a>
+  {{ end }}
+</div>
+{{ end }}

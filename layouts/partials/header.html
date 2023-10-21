@@ -1,0 +1,17 @@
+<div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
+  <div class="flex-none">
+    <a href="{{.Site.BaseURL }}" class="">
+      <img class="h-12 w-12 rounded-full object-cover bg-zinc-100" src="/logo.webp" alt="logo">
+    </a>
+  </div>
+  <div class="flex-1"></div>
+  <div class="flex-none">
+    {{ partial "menu.html" }}
+  </div>
+  <div class="flex flex-none ml-2">
+    <button type="button" class="flex group rounded-full px-3 py-3 shadow-lg ring-1 ring-slate-900/5 backdrop-blur">
+      <i class="h-6 w-6 flex-none dark:hidden"> {{ partial "icon" "brightness-down" }} </i>
+      <i class="h-6 w-6 flex-none hidden"> {{ partial "icon" "moon-stars" }} </i>
+    </button>
+  </div>
+</div>

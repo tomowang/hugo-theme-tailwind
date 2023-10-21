@@ -1,0 +1,12 @@
+<nav class="h-full">
+  <ul class="flex rounded-full px-3 text-base font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur">
+  {{ range sort site.Menus.main "Weight" }}
+    {{ if not .HasChildren }}
+      <li id="{{ .Identifier }}" class="">
+        <a class="block px-3 py-3 hover:text-emerald-500"
+          href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
+      </li>
+    {{ end }}
+  {{ end }}
+  </ul>
+</nav>

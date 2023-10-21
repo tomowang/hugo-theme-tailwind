@@ -1,0 +1,29 @@
+<section class="flex flex-row justify-between w-full max-w-4xl lg:max-w-5xl p-6 text-slate-400">
+  <div class="flex flex-row">
+    <a href="#" class="flex flex-row mr-2">
+      <span class="hidden">Facebook</span>
+      <i class="h-6 w-6 flex-none"> {{ partial "icon" "brand-facebook" }} </i>
+    </a>
+    <a href="#" class="flex flex-row mr-2">
+      <span class="hidden">GitHub</span>
+      <i class="h-6 w-6 flex-none"> {{ partial "icon" "brand-github" }} </i>
+    </a>
+    <a href="#" class="flex flex-row mr-2">
+      <span class="hidden">LinkedIn</span>
+      <i class="h-6 w-6 flex-none"> {{ partial "icon" "brand-linkedin" }} </i>
+    </a>
+  </div>
+  <div class="flex flex-row">
+    <i class="h-6 w-6 flex-none"> {{ partial "icon" "copyright" }} </i>
+    <span class="">
+      {{ if and (.Site.Params.footer.since)
+        (ne .Site.Params.footer.since (int (now.Format "2006")))
+      }} {{ .Site.Params.footer.since }} -
+      {{ end }}
+      {{ now.Format "2006" }} {{ .Site.Copyright }}
+    </span>
+    <span class="ml-2 pl-2 border-l border-slate-300">Powered by
+      <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>
+    </span>
+  </div>
+</section>

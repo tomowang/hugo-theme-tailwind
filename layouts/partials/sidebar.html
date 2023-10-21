@@ -1,0 +1,11 @@
+{{ if .Site.Taxonomies.categories }}
+  {{ with .Site.Taxonomies }}
+    {{ partial "block/sidebar_section" (dict "Context" . "Taxonomy" "categories" "Limit" 10 "Icon" "category-2") }}
+  {{ end}}
+{{ end}}
+
+{{ if .Site.Taxonomies.tags }}
+  {{ with .Site.Taxonomies }}
+    {{ partial "block/sidebar_section" (dict "Context" . "Taxonomy" "tags" "Limit" 10 "Icon" "hash") }}
+  {{ end}}
+{{ end}}

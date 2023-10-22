@@ -1,13 +1,13 @@
 {{- $taxonomy := .Taxonomy -}}
-{{- $context := index .Context $taxonomy -}}
+{{- $context := .Context -}}
 {{- $limit := .Limit -}}
-
+{{ $icon := (index site.Params.taxonomies.icons $taxonomy) | default "tags" }}
 
 <section class="flex flex-col w-full gap-y-3 p-6 mt-6">
   <div class="flex flex-row">
-    <a class="flex flex-row" href='{{ printf "/%s/" $taxonomy }}'>
+    <a class="flex flex-row" href='{{ (site.GetPage $taxonomy).RelPermalink }}'>
       <i class="h-6 w-6 flex-none">
-        {{ partial "icon" .Icon }}
+        {{ partial "icon" $icon }}
       </i>
       <h2 class="pl-1 uppercase">
         {{ $taxonomy }}

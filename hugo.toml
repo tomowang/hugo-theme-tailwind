@@ -21,6 +21,10 @@ hasCJKLanguage = true
     since = 2023
     poweredby = true
 
+  [params.taxonomies.icons]
+    categories = "category-2"
+    tags = "hash"
+
 [module]
   [module.hugoVersion]
     extended = false

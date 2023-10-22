@@ -16,7 +16,7 @@
         <a href="{{ (urlize (printf "tags/%s" . )) | relLangURL }}/"
           class="flex flex-row text-sm mr-2 py-1">
           <i class="h-5 w-5 flex-none">
-            {{ partial "icon" "hash" }}
+            {{ partial "icon" site.Params.taxonomies.icons.tags }}
           </i>
           <span class="ml-0">{{ . }}</span>
         </a>

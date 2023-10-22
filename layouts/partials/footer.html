@@ -22,8 +22,10 @@
       {{ end }}
       {{ now.Format "2006" }} {{ .Site.Copyright }}
     </span>
+    {{ if .Site.Params.footer.poweredby }}
     <span class="ml-2 pl-2 border-l border-slate-300">Powered by
       <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>
     </span>
+    {{ end }}
   </div>
 </section>

@@ -1,6 +1,25 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+hasCJKLanguage = true
+
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    unsafe= true
+  [markup.goldmark.extensions]
+    [markup.goldmark.extensions.cjk]
+      enable = true
+      eastAsianLineBreaks = true
+      escapedSpace = true
+
+[params]
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+
+  [params.footer]
+    since = 2023
+    poweredby = true
 
 [module]
   [module.hugoVersion]

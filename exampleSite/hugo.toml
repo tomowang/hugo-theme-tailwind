@@ -16,6 +16,9 @@ theme = "hugo-theme-tailwind"
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "post"
 
+  [params.header]
+    logo = "/logo.webp"
+
 [menu]
 
   [[menu.main]]

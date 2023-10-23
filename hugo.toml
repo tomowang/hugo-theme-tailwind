@@ -17,6 +17,9 @@ hasCJKLanguage = true
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
 
+  [params.header]
+    logo = "https://placehold.co/512/webp"
+
   [params.footer]
     since = 2023
     poweredby = true

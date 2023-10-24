@@ -17,9 +17,8 @@
     <div class="flex flex-row">
       <section class="flex flex-col w-2/3">
         {{ range (.Paginate $pages).Pages }}
-          <article class="flex flex-col gap-y-3 p-6 mt-6 rounded-lg shadow-md bg-white">
-
-            <h2 class="text-4xl font-semibold text-slate-800">
+          <article class="flex flex-col gap-y-3 p-6 mt-6 rounded-lg shadow-md bg-white dark:bg-gray-700">
+            <h2 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
               <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
             </h2>
 

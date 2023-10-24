@@ -1,5 +1,5 @@
 <nav class="h-full">
-  <ul class="flex rounded-full px-3 text-base font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur">
+  <ul class="flex rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5 backdrop-blur">
   {{ range sort site.Menus.main "Weight" }}
     {{ if not .HasChildren }}
       <li id="{{ .Identifier }}" class="">

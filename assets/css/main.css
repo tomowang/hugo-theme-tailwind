@@ -1,6 +1,14 @@
 .footnote-backref {
   text-decoration: none !important;
 }
+.darkmode-toggle .icon-tabler.icon-tabler-brightness-down {
+  fill: white;
+  stroke: white;
+}
+.darkmode-toggle .icon-tabler.icon-tabler-moon-stars {
+  fill: white;
+  stroke: white;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

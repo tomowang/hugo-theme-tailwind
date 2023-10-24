@@ -1,10 +1,10 @@
 {{ with .Description }}
-  <p class="my-4 text-large text-slate-600">
+  <p class="my-4 text-large text-slate-600 dark:text-slate-300">
     {{ . | markdownify }}
   </p>
 {{ else }}
   {{ if .Truncated }}
-  <p class="my-4 text-large text-slate-600">
+  <p class="my-4 text-large text-slate-600 dark:text-slate-300">
     {{ .Summary }}
   </p>
   {{ end }}

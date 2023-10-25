@@ -1,0 +1,15 @@
+{{- $vid := .Get "id" | default (.Get 0) -}}
+{{ $q := "" }}
+
+{{ if strings.HasPrefix (lower $vid) "bv" }}
+  {{ $q = querify "bvid" $vid }}
+{{ else }}
+  {{ $q = querify "aid" $vid }}
+{{ end }}
+
+<div class="w-full aspect-video">
+  <iframe class="w-full aspect-video"
+    src="//player.bilibili.com/player.html?{{ $q | safeURL }}&p=1"
+    scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+  </iframe>
+</div>

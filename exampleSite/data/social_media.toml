@@ -1,0 +1,29 @@
+[[items]]
+enabled = true
+title = 'Facebook'
+icon = 'brand-facebook'
+link = 'https://www.facebook.com/'
+
+[[items]]
+enabled = true
+title = 'Twitter'
+icon = 'brand-x'
+link = 'https://twitter.com/__PurPleFoX__'
+
+[[items]]
+enabled = true
+title = 'Instagram'
+icon = 'brand-instagram'
+link = 'https://www.instagram.com/'
+
+[[items]]
+enabled = true
+title = 'LinkedIn'
+icon = 'brand-linkedin'
+link = 'https://www.linkedin.com/'
+
+[[items]]
+enabled = true
+title = 'Github'
+icon = 'brand-github'
+link = 'https://github.com/tomowang'

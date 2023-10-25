@@ -1,17 +1,6 @@
-<section class="flex flex-row justify-between w-full max-w-4xl lg:max-w-5xl p-6 text-slate-400">
+<section class="flex flex-row justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-400">
   <div class="flex flex-row">
-    <a href="#" class="flex flex-row mr-2">
-      <span class="hidden">Facebook</span>
-      <i class="h-6 w-6 flex-none"> {{ partial "icon" "brand-facebook" }} </i>
-    </a>
-    <a href="#" class="flex flex-row mr-2">
-      <span class="hidden">GitHub</span>
-      <i class="h-6 w-6 flex-none"> {{ partial "icon" "brand-github" }} </i>
-    </a>
-    <a href="#" class="flex flex-row mr-2">
-      <span class="hidden">LinkedIn</span>
-      <i class="h-6 w-6 flex-none"> {{ partial "icon" "brand-linkedin" }} </i>
-    </a>
+    {{ partial "social_media" . }}
   </div>
   <div class="flex flex-row">
     <i class="h-6 w-6 flex-none"> {{ partial "icon" "copyright" }} </i>

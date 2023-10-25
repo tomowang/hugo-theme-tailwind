@@ -5,7 +5,7 @@ hasCJKLanguage = true
 
 [markup.goldmark]
   [markup.goldmark.renderer]
-    unsafe= true
+    unsafe = true
   [markup.goldmark.extensions]
     [markup.goldmark.extensions.cjk]
       enable = true

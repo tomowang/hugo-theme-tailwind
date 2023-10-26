@@ -38,3 +38,8 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 ## BiliBili Simple Shortcode
 
 {{< bilibili BV1kE41147oo >}}
+
+
+## Asciinema Embed Shortcode
+
+{{< asciinema 239367 >}}

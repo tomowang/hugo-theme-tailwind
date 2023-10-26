@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 hasCJKLanguage = true
 
+# GA Tracking ID
+googleAnalytics = ""
+
 [markup.goldmark]
   [markup.goldmark.renderer]
     unsafe = true

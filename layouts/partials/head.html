@@ -17,3 +17,6 @@
 <link rel="stylesheet" href="{{ "main.css" | relURL }}" />
 
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
+
+<!-- https://gohugo.io/templates/internal/#use-the-google-analytics-template -->
+{{- template "_internal/google_analytics.html" . -}}

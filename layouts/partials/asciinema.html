@@ -1,0 +1,15 @@
+<script src="{{ "asciinema-player.min.js" | relURL }}"></script>
+<link href="{{ "asciinema-player.css" | relURL }}" rel="stylesheet">
+<script>
+(function() {
+  document.querySelectorAll('[data-asciinema-player]').forEach(function(el) {
+    console.log(el.dataset.asciinemaPlayer);
+    AsciinemaPlayer.create(el.dataset.asciinemaPlayer, el, {
+      rows: 30,
+      preload: true,
+      theme: 'solarized-dark',
+      fit: false,
+    });
+  });
+})();
+</script>

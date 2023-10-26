@@ -29,5 +29,6 @@
   </footer>
   {{ $built := resources.Get "js/main.js" | js.Build "main.js" }}
   <script src="{{ $built.RelPermalink }}"></script>
+  {{ partial "extended_footer.html" . }}
 </body>
 </html>

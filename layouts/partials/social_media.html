@@ -1,7 +1,7 @@
 {{ with $.Site.Data.social_media.items }}
   {{ range . }}
   {{ if .enabled }}
-    <a href="{{ .link | safeURL | default "#" }}" title="{{ .title }}" class="flex flex-row mr-2">
+    <a href="{{ .link | safeURL | default "#" }}" target="_blank" title="{{ .title }}" class="flex flex-row mr-2">
       <span class="hidden">{{ .title }}</span>
       <i class="h-6 w-6 flex-none"> {{ partial "icon" .icon }} </i>
     </a>

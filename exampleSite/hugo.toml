@@ -20,7 +20,7 @@ theme = "hugo-theme-tailwind"
   contentTypeName = "post"
 
   [params.header]
-    logo = "/logo.webp"
+    logo = "logo.webp"
 
 [menu]
 

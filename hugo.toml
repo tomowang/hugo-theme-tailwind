@@ -6,6 +6,11 @@ hasCJKLanguage = true
 # GA Tracking ID
 googleAnalytics = ""
 
+# comments
+# https://gohugo.io/templates/internal/#disqus
+# disqusShortname = "your-disqus-shortname"
+disqusShortname = ""
+
 [markup.goldmark]
   [markup.goldmark.renderer]
     unsafe = true
@@ -34,6 +39,21 @@ googleAnalytics = ""
   [params.taxonomies.icons]
     categories = "category-2"
     tags = "hash"
+
+  # giscus is comments system powered by GitHub Discussions
+  # generate configurations from https://giscus.app/
+  [params.giscus]
+    enabled = false
+    repo = "your-repo-name"
+    repoID = "your-repo-id"
+    category = "your-category"
+    categoryID = "your-category-id"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lang = "en"
 
 [module]
   [module.hugoVersion]

@@ -1,0 +1,66 @@
+<!--
+To add comments section, please create `layouts/partials/comments.html` in your
+Hugo directory and insert:
+
+{{ template "_internal/disqus.html" . }}
+
+or whatever comment engine you want -> https://gohugo.io/content-management/comments/#readout -->
+
+{{ if .Site.DisqusShortname }}
+  {{ template "_internal/disqus.html" . }}
+{{ else if .Site.Params.giscus.enabled }}
+  {{ with .Site.Params.giscus }}
+<script type="text/javascript">
+  (function() {
+    const themeToggle = document.querySelector('.darkmode-toggle input');
+    const light = 'light';
+    const dark = 'dark';
+    let isDark = localStorage.theme === dark || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    let theme = isDark ? dark : light;
+
+    const s = document.createElement('script');
+    s.type = 'text/javascript';
+    const dataset = {
+        repo: '{{ .repo }}',
+        repoId: '{{ .repoId }}',
+        category: '{{ .category }}',
+        categoryId: '{{ .categoryId }}',
+        mapping: '{{ .mapping }}',
+        reactionsEnabled: '{{ .reactionsEnabled }}',
+        emitMetadata: '{{ .emitMetadata }}',
+        theme: theme,
+        lang: '{{ .lang }}',
+    };
+    s.src = 'https://giscus.app/client.js';
+    s.crossorigin = 'anonymous';
+    s.async = true;
+    Object.entries(dataset).forEach(function(a) {
+        return s.dataset[a[0]] = a[1];
+    });
+
+    const curScriptElement = document.currentScript;
+    curScriptElement.parentNode.insertBefore(s, curScriptElement);
+
+    function sendMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      // console.log(iframe);
+      if (!iframe) return;
+      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+    }
+
+    themeToggle.addEventListener('change', function () {
+      if (this.checked) {
+        theme = dark;
+      } else {
+        theme = light;
+      }
+      sendMessage({
+        setConfig: {
+          theme: theme,
+        }
+      });
+    });
+  })();
+</script>
+  {{ end}}
+{{ end }}

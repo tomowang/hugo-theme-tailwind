@@ -1,7 +1,7 @@
 baseURL = "https://gohugo.io"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Steve Francia and the Hugo Authors; all rights reserved."
+title = "Hugo Theme Tailwind Example Site"
+author = "Xiaoliang Wang"
+copyright = "Xiaoliang Wang"
 paginate = 2
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -21,6 +21,10 @@ theme = "hugo-theme-tailwind"
 
   [params.header]
     logo = "logo.webp"
+
+  [params.footer]
+    since = 2023
+    poweredby = true
 
 [menu]
 

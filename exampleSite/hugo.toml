@@ -11,6 +11,9 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 theme = "hugo-theme-tailwind"
 
+# GA Tracking ID
+googleAnalytics = "G-75W5D7R0V1"
+
 [markup]
   _merge = "deep"
 

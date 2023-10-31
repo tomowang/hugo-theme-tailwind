@@ -21,6 +21,10 @@ disqusShortname = ""
       escapedSpace = true
 
 [params]
+  # SEO keywords and description for your site.
+  keywords = "hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+  subtitle = "Example site for hugo-theme-tailwind"
+
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"

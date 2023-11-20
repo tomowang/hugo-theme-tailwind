@@ -1,5 +1,5 @@
 <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
-  <div class="flex-none">
+  <div class="flex-none ml-2 md:ml-0">
     <a href="{{.Site.BaseURL }}" class="">
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="{{ .Site.Params.header.logo | relURL }}" alt="logo">
     </a>
@@ -8,7 +8,7 @@
   <div class="flex-none">
     {{ partial "menu.html" }}
   </div>
-  <div class="darkmode-toggle flex flex-none ml-2">
+  <div class="darkmode-toggle flex flex-none mx-2 md:mr-0">
     <label class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600">
       <input type="checkbox" class="sr-only peer">
       <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">

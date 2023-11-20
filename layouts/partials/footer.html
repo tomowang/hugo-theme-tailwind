@@ -1,7 +1,8 @@
-<section class="flex flex-row justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-400">
+<section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-400">
   <div class="flex flex-row">
     {{ partial "social_media" . }}
   </div>
+  <div class="grow"></div>
   <div class="flex flex-row">
     <i class="h-6 w-6 flex-none"> {{ partial "icon" "copyright" }} </i>
     <span class="">
@@ -11,12 +12,14 @@
       {{ end }}
       {{ now.Format "2006" }} {{ .Site.Copyright }}
     </span>
-    {{ if .Site.Params.footer.poweredby }}
-    <span class="ml-2 pl-2 border-l border-slate-300 dark:border-slate-400">Powered by
+  </div>
+  {{ if .Site.Params.footer.poweredby }}
+  <div class="flex flex-row">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">Powered by
       <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>
       <span class="text-red-600">&hearts;</span>
       <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
     </span>
-    {{ end }}
   </div>
+  {{ end }}
 </section>

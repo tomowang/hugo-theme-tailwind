@@ -15,10 +15,10 @@ Hugo theme build using [Tailwind CSS](https://tailwindcss.com/), mostly for blog
  * Comments settings for [disqus](https://disqus.com/) and [giscus](https://giscus.app/)
  * Social media link data settings
  * Additional short code: bilibili, asciinema
+ * Responsive design
 
 Todo:
 
- - [ ] Responsive design
  - [ ] Multilingual
 
 ## Installation

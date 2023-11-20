@@ -1,5 +1,5 @@
 {{ if (or .Params.categories .Params.tags) }}
-  <ul class="flex flex-row text-slate-400">
+  <ul class="flex flex-row flex-wrap text-slate-400">
     {{ if .Params.categories }}
       {{ range .Params.categories }}
       <li>

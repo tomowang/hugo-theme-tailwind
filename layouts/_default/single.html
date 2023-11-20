@@ -1,29 +1,31 @@
 {{ define "main" }}
-<div class="flex flex-col gap-y-3 p-6 mt-6 rounded-lg shadow-md bg-white dark:bg-gray-700 w-full max-w-4xl lg:max-w-5xl">
-  <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-  </h1>
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
+    <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
+      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+    </h1>
 
-  {{ partial "block/desc" . }}
-  {{ partial "block/taxonomies" .}}
+    {{ partial "block/desc" . }}
+    {{ partial "block/taxonomies" .}}
 
-  <div class="flex flex-row text-slate-400">
-    {{ partial "block/time" . }}
-  </div>
+    <div class="flex flex-row text-slate-400">
+      {{ partial "block/time" . }}
+    </div>
 
-  {{ if or .Params.Toc $.Site.Params.Toc }}
-    {{ if ne .Params.Toc false }}
-    <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
-      <h2>Table of Contents</h2>
-      <aside>{{ .TableOfContents }}</aside>
-    </section>
+    {{ if or .Params.Toc $.Site.Params.Toc }}
+      {{ if ne .Params.Toc false }}
+      <section class="prose prose-slate dark:prose-invert w-full max-w-4xl lg:max-w-5xl mt-6">
+        <h2>Table of Contents</h2>
+        <aside>{{ .TableOfContents }}</aside>
+      </section>
+      {{ end }}
     {{ end }}
-  {{ end }}
 
-  <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
-    {{ .Content | safeHTML }}
-  </article>
+    <article class="mt-6 w-full max-w-4xl lg:max-w-5xl prose prose-slate dark:prose-invert prose-quoteless post-content">
+      {{ .Content | safeHTML }}
+    </article>
 
-  {{ partial "comments" . }}
+    {{ partial "comments" . }}
+  </div>
 </div>
 {{ end }}

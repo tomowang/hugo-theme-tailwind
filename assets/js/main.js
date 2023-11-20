@@ -21,4 +21,10 @@
       document.documentElement.classList.remove(dark);
     }
   });
+
+  const navbarMenuToggle = document.getElementById('navbar-menu-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
+  navbarMenuToggle.addEventListener('click', function () {
+    navbarMenu.classList.toggle('hidden');
+  });
 })();

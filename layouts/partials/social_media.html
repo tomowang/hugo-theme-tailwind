@@ -1,4 +1,4 @@
-{{ with $.Site.Data.social_media.items }}
+{{ with $.Site.Params.social_media.items }}
   {{ range . }}
   {{ if .enabled }}
     <a href="{{ .link | safeURL | default "#" }}" target="_blank" title="{{ .title }}" class="flex flex-row mr-2">

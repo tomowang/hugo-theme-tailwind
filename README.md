@@ -88,12 +88,13 @@ Some of the configuration options are:
  * `contentTypeName`: dir name of your blog content (default is `content/posts`).
  * `params.taxonomies.icons`: icons for taxonomies (categories, tags, series, etc.).
  * `params.giscus`: giscus settings
+ * `params.social_media`: social media links shown in the footer
 
-For social media link data, you can refer entries in `data/social_media.toml`
-(You can add more or disable exsited entries in `data/social_media.toml`).
+For social media link data, you can refer entries in `params.social_media.items`
+(You can add more or disable exsited entries in `params.social_media.items`).
 
 ```toml
-[[items]]
+[[params.social_media.items]]
 enabled = false
 title = 'Facebook'
 icon = 'brand-facebook'

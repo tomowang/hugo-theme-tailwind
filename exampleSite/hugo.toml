@@ -48,6 +48,37 @@ googleAnalytics = "G-75W5D7R0V1"
     inputPosition = "bottom"
     lang = "en"
 
+  [params.social_media]
+    [[params.social_media.items]]
+    enabled = true
+    title = 'Facebook'
+    icon = 'brand-facebook'
+    link = 'https://www.facebook.com/'
+
+    [[params.social_media.items]]
+    enabled = true
+    title = 'Twitter'
+    icon = 'brand-x'
+    link = 'https://twitter.com/__PurPleFoX__'
+
+    [[params.social_media.items]]
+    enabled = true
+    title = 'Instagram'
+    icon = 'brand-instagram'
+    link = 'https://www.instagram.com/'
+
+    [[params.social_media.items]]
+    enabled = true
+    title = 'LinkedIn'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/'
+
+    [[params.social_media.items]]
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/tomowang'
+
 [menu]
 
   [[menu.main]]

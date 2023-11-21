@@ -59,6 +59,37 @@ disqusShortname = ""
     inputPosition = "bottom"
     lang = "en"
 
+  [params.social_media]
+    [[params.social_media.items]]
+    enabled = false
+    title = 'Facebook'
+    icon = 'brand-facebook'
+    link = 'https://www.facebook.com/'
+
+    [[params.social_media.items]]
+    enabled = false
+    title = 'Twitter'
+    icon = 'brand-x'
+    link = 'https://twitter.com/__PurPleFoX__'
+
+    [[params.social_media.items]]
+    enabled = false
+    title = 'Instagram'
+    icon = 'brand-instagram'
+    link = 'https://www.instagram.com/'
+
+    [[params.social_media.items]]
+    enabled = false
+    title = 'LinkedIn'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/'
+
+    [[params.social_media.items]]
+    enabled = false
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/tomowang'
+
 [module]
   [module.hugoVersion]
     extended = false

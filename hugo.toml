@@ -3,14 +3,6 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 hasCJKLanguage = true
 
-# GA Tracking ID
-googleAnalytics = ""
-
-# comments
-# https://gohugo.io/templates/internal/#disqus
-# disqusShortname = "your-disqus-shortname"
-disqusShortname = ""
-
 [markup.goldmark]
   [markup.goldmark.renderer]
     unsafe = true
@@ -89,6 +81,42 @@ disqusShortname = ""
     title = 'Github'
     icon = 'brand-github'
     link = 'https://github.com/tomowang'
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+  # GA Tracking ID
+  [services.googleAnalytics]
+    ID = ""
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
+
+  # comments
+  [services.disqus]
+    # https://gohugo.io/templates/internal/#disqus
+    # disqusShortname = "your-disqus-shortname"
+    shortname = ''
 
 [module]
   [module.hugoVersion]

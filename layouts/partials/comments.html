@@ -6,7 +6,7 @@ Hugo directory and insert:
 
 or whatever comment engine you want -> https://gohugo.io/content-management/comments/#readout -->
 
-{{ if .Site.DisqusShortname }}
+{{ if .Site.Config.Services.Disqus.Shortname }}
   {{ template "_internal/disqus.html" . }}
 {{ else if .Site.Params.giscus.enabled }}
   {{ with .Site.Params.giscus }}

@@ -11,9 +11,6 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 theme = "hugo-theme-tailwind"
 
-# GA Tracking ID
-googleAnalytics = "G-75W5D7R0V1"
-
 [markup]
   _merge = "deep"
 
@@ -118,9 +115,18 @@ series = "series"
     privacyEnhanced = true
 
 [services]
+  # GA Tracking ID
+  [services.googleAnalytics]
+    ID = "G-75W5D7R0V1"
 
   [services.instagram]
     disableInlineCSS = true
 
   [services.twitter]
     disableInlineCSS = true
+
+  # comments
+  [services.disqus]
+    # https://gohugo.io/templates/internal/#disqus
+    # disqusShortname = "your-disqus-shortname"
+    shortname = ''

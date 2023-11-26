@@ -33,4 +33,4 @@ hasCJKLanguage = true
 [module]
   [module.hugoVersion]
     extended = false
-    min = "0.84.2"
+    min = "0.120.0"

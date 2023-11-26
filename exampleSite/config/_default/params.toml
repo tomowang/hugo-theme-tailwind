@@ -1,0 +1,60 @@
+# SEO keywords and description for your site.
+keywords = "hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+subtitle = "Example site for hugo-theme-tailwind"
+
+# dir name of your blog content (default is `content/posts`).
+# the list of set content will show up on your index page (baseurl).
+contentTypeName = "post"
+
+[header]
+  logo = "logo.webp"
+
+[footer]
+  since = 2023
+  poweredby = true
+
+# giscus is comments system powered by GitHub Discussions
+# generate configurations from https://giscus.app/
+[giscus]
+  enabled = true
+  repo = "tomowang/hugo-theme-tailwind"
+  repoID = "R_kgDOKjVJHA"
+  category = "Announcements"
+  categoryID = "DIC_kwDOKjVJHM4CafqS"
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  lang = "en"
+
+[social_media]
+  [[social_media.items]]
+    enabled = true
+    title = 'Facebook'
+    icon = 'brand-facebook'
+    link = 'https://www.facebook.com/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Twitter'
+    icon = 'brand-x'
+    link = 'https://twitter.com/__PurPleFoX__'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'Instagram'
+    icon = 'brand-instagram'
+    link = 'https://www.instagram.com/'
+
+  [[social_media.items]]
+    enabled = true
+    title = 'LinkedIn'
+    icon = 'brand-linkedin'
+    link = 'https://www.linkedin.com/'
+
+  [[social_media.items]]
+  enabled = true
+  title = 'Github'
+  icon = 'brand-github'
+  link = 'https://github.com/tomowang'

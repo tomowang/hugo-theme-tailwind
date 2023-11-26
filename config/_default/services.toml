@@ -1,0 +1,15 @@
+# GA Tracking ID
+[googleAnalytics]
+  ID = ""
+
+[instagram]
+  disableInlineCSS = true
+
+[twitter]
+  disableInlineCSS = true
+
+# comments
+[disqus]
+# https://gohugo.io/templates/internal/#disqus
+# disqusShortname = "your-disqus-shortname"
+  shortname = ''

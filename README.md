@@ -79,7 +79,8 @@ tag = "tags"
 series = "series"
 ```
 
-For advanced usage, please refer to the `hugo.toml` and `exampleSite/hugo.toml`.
+For advanced usage, please refer to config directory `config/_default` and
+`exampleSite/config/_default`.
 Some of the configuration options are:
 
  * `markup`: goldmark and options for markdown rendering
@@ -94,7 +95,7 @@ For social media link data, you can refer entries in `params.social_media.items`
 (You can add more or disable exsited entries in `params.social_media.items`).
 
 ```toml
-[[params.social_media.items]]
+[[social_media.items]]
 enabled = false
 title = 'Facebook'
 icon = 'brand-facebook'

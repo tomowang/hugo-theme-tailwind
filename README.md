@@ -16,10 +16,7 @@ Hugo theme build using [Tailwind CSS](https://tailwindcss.com/), mostly for blog
  * Social media link data settings
  * Additional short code: bilibili, asciinema
  * Responsive design
-
-Todo:
-
- - [ ] Multilingual
+ * Multilingual
 
 ## Installation
 

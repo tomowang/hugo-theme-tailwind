@@ -10,7 +10,7 @@ contentTypeName = "post"
   logo = "logo.webp"
 
 [footer]
-  since = 2023
+  since = 2022
   poweredby = true
 
 # giscus is comments system powered by GitHub Discussions
@@ -54,7 +54,7 @@ contentTypeName = "post"
     link = 'https://www.linkedin.com/'
 
   [[social_media.items]]
-  enabled = true
-  title = 'Github'
-  icon = 'brand-github'
-  link = 'https://github.com/tomowang'
+    enabled = true
+    title = 'Github'
+    icon = 'brand-github'
+    link = 'https://github.com/tomowang'

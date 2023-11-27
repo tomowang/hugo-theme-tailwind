@@ -2,7 +2,7 @@
   {{ $type := .Type }}
   <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700 w-full max-w-4xl lg:max-w-5xl">
     <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
-      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <a href="{{ .RelPermalink }}">{{ T (printf "taxonomies.%s" $type) | safeHTML }}</a>
     </h1>
     <ul class="flex flex-col gap-3">
       {{ range $key, $value := .Data.Terms.ByCount }}

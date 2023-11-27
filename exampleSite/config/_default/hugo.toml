@@ -4,7 +4,7 @@ author = "Xiaoliang Wang"
 copyright = "Xiaoliang Wang"
 paginate = 2 # for demonstration of pagination
 languageCode = "en"
-DefaultContentLanguage = "en"
+defaultContentLanguage = "en"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456

@@ -1,0 +1,23 @@
+read_more = "阅读更多"
+table_of_contents = "目录"
+open_main_menu = "打开菜单"
+open_lang_switcher = "打开语言切换"
+
+[404]
+go_back_home = "回到首页"
+sorry = "对不起，暂未找到您请求的页面"
+page_not_found = "页面未找到"
+
+[footer]
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "新文章"
+older_posts = "旧文章"
+
+[taxonomies]
+categories = "分类"
+tags = "标签"
+series = "系列"

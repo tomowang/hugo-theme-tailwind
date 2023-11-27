@@ -8,7 +8,31 @@
   <div class="flex-none">
     {{ partial "menu.html" }}
   </div>
-  <div class="darkmode-toggle flex flex-none mx-2 md:mr-0">
+  {{ if (gt .AllTranslations.Len 1) }}
+  <div class="flex-none">
+    <div class="h-full static">
+      <button id="navbar-lang-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+        <span class="sr-only">{{ T "open_lang_switcher" }}</span>
+        <i class="w-8 h-8">
+          {{ partial "icon" "language" }}
+        </i>
+      </button>
+      <div class="absolute hidden top-16 z-50" id="navbar-lang">
+        <ul class="flex flex-col rounded-sm px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+        {{ range .AllTranslations.ByWeight }}
+          <li class="">
+            <a class="block px-3 py-3 hover:text-emerald-500"
+              href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
+          </li>
+        {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {{ else }}
+  <div class="flex-none mx-1"></div>
+  {{ end }}
+  <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
     <label class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600">
       <input type="checkbox" class="sr-only peer">
       <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">

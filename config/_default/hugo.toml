@@ -1,5 +1,5 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+languageCode = 'en'
 title = 'My New Hugo Site'
 hasCJKLanguage = true
 

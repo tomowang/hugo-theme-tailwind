@@ -4,21 +4,35 @@
   </div>
   <div class="grow"></div>
   <div class="flex flex-row">
-    <i class="h-6 w-6 flex-none"> {{ partial "icon" "copyright" }} </i>
-    <span class="">
-      {{ if and (.Site.Params.footer.since)
-        (ne .Site.Params.footer.since (int (now.Format "2006")))
-      }} {{ .Site.Params.footer.since }} -
-      {{ end }}
-      {{ now.Format "2006" }} {{ .Site.Copyright }}
-    </span>
+    {{- $CopyrightSign := (printf `<i class="h-6 w-6 flex-none">%s</i>` (partial "icon" "copyright")) -}}
+    {{- $SinceYear := .Site.Params.footer.since -}}
+    {{- $CurrentYear := now.Format "2006" -}}
+    {{- $Copyright := .Site.Copyright -}}
+
+    {{ if and (.Site.Params.footer.since)
+      (ne .Site.Params.footer.since (int (now.Format "2006")))
+    }}
+    {{ T "footer.copyright_with_since"  (dict
+      "CopyrightSign" $CopyrightSign
+      "SinceYear" $SinceYear
+      "CurrentYear" $CurrentYear
+      "Copyright" $Copyright
+    ) | safeHTML }}
+    {{ else }}
+    {{ T "footer.copyright_wo_since"  (dict
+      "CopyrightSign" $CopyrightSign
+      "CurrentYear" $CurrentYear
+      "Copyright" $Copyright
+    ) | safeHTML }}
+    {{ end }}
   </div>
   {{ if .Site.Params.footer.poweredby }}
   <div class="flex flex-row">
-    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">Powered by
-      <a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>
-      <span class="text-red-600">&hearts;</span>
-      <a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>
+    {{- $Generator := `<a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>` -}}
+    {{- $Theme := `<a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>` -}}
+    {{- $Heart := `<span class="text-red-600">&hearts;</span>` }}
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+      {{ T "footer.powered_by" (dict "Generator" $Generator "Theme" $Theme "Heart" $Heart ) | safeHTML }}
     </span>
   </div>
   {{ end }}

@@ -24,7 +24,16 @@
 
   const navbarMenuToggle = document.getElementById('navbar-menu-toggle');
   const navbarMenu = document.getElementById('navbar-menu');
+  const navbarLangToggle = document.getElementById('navbar-lang-toggle');
+  const navbarLang = document.getElementById('navbar-lang');
+
   navbarMenuToggle.addEventListener('click', function () {
+    navbarLang.classList.add('hidden');
     navbarMenu.classList.toggle('hidden');
+  });
+
+  navbarLangToggle.addEventListener('click', function () {
+    navbarMenu.classList.add('hidden');
+    navbarLang.classList.toggle('hidden');
   });
 })();

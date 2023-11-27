@@ -10,7 +10,7 @@
         {{ partial "icon" $icon }}
       </i>
       <h2 class="pl-1 uppercase">
-        {{ $taxonomy }}
+        {{ T (printf "taxonomies.%s" $taxonomy) | safeHTML }}
       </h2>
     </a>
   </div>

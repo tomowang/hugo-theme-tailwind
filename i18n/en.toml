@@ -1,0 +1,23 @@
+read_more = "Read more"
+table_of_contents = "Table of Contents"
+open_main_menu = "Open main menu"
+open_lang_switcher = "Open language switcher"
+
+[404]
+go_back_home = "Go back home"
+sorry = "Sorry, we couldn't find the page you're looking for."
+page_not_found = "Page not found"
+
+[footer]
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "Newer posts"
+older_posts = "Older posts"
+
+[taxonomies]
+categories = "Categories"
+tags = "Tags"
+series = "Series"

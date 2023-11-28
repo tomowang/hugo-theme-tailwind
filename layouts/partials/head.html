@@ -9,6 +9,9 @@
   content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
 />
 <meta name="robots" content="noodp" />
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />

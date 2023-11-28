@@ -8,7 +8,7 @@
   <div class="flex-none">
     {{ partial "menu.html" }}
   </div>
-  {{ if (gt .AllTranslations.Len 1) }}
+  {{ if (gt .Site.Home.AllTranslations.Len 1) }}
   <div class="flex-none">
     <div class="h-full static">
       <button id="navbar-lang-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">

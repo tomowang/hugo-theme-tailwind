@@ -1,0 +1,13 @@
+{{- $styles := resources.Get "css/index.css" -}}
+{{- $env := getenv "HUGO_THEME_DEVELOPMENT" -}}
+
+{{- if eq $env "true" }}
+  {{- $styles = resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") -}}
+{{ end -}}
+
+{{- if .Site.IsServer }}
+  {{- $styles = $styles | resources.ExecuteAsTemplate (printf "css/main.dev.%v.css" now.UnixMilli) . -}}
+{{ else }}
+  {{- $styles = $styles | minify | fingerprint | resources.PostProcess -}}
+{{ end -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">

@@ -104,12 +104,13 @@ link = 'https://www.facebook.com/'
 This theme use Tailwind CSS for styling. If you want to make some changes,
 use `pnpm install` to install dependencies.
 
-* Development: `npm run dev`
-* Production: `npm run build`
+The CSS process is inspired by [hugo-tailwindcss-starter-theme](https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme).
 
-Test example site: `cd exampleSite && hugo serve --gc --themesDir ../..`
+ * Development: `npm run dev`, this will generate css for theme users.
+
+Test example site: `HUGO_THEME_DEVELOPMENT=true hugo server -s exampleSite --gc --themesDir=../..`
 (exampleSite is fetched from https://github.com/gohugoio/hugoBasicExample
-with some modifications)
+with some modifications).
 
 ### Add new icons
 

@@ -3,6 +3,10 @@ languageCode = 'en'
 title = 'My New Hugo Site'
 hasCJKLanguage = true
 
+[build]
+  [build.buildStats]
+    enable = true
+
 [markup.goldmark]
   [markup.goldmark.renderer]
     unsafe = true

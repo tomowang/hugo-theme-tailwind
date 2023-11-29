@@ -1,10 +1,12 @@
 {
   "scripts": {
-    "dev": "npx tailwindcss -i assets/css/main.css -o ./static/main.css --watch",
-    "build": "npx tailwindcss -i assets/css/main.css -o ./static/main.css --minify"
+    "dev": "npx tailwindcss -i assets/css/main.css -o assets/css/output.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",
     "tailwindcss": "^3.3.3"

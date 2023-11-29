@@ -15,9 +15,7 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
 <link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
-
-<!-- Theme CSS (/static/main.css) -->
-<link rel="stylesheet" href="{{ "main.css" | relURL }}" />
+{{ partialCached "css.html" . }}
 
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
 

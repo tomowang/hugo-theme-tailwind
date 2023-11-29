@@ -7,6 +7,10 @@ hasCJKLanguage = true
   [build.buildStats]
     enable = true
 
+[markup]
+[markup.highlight]
+  # lineNos = true // this has css issue when using class
+  noClasses = false
 [markup.goldmark]
   [markup.goldmark.renderer]
     unsafe = true

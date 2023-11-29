@@ -28,12 +28,12 @@
   const navbarLang = document.getElementById('navbar-lang');
 
   navbarMenuToggle.addEventListener('click', function () {
-    navbarLang.classList.add('hidden');
+    navbarLang && navbarLang.classList.add('hidden');
     navbarMenu.classList.toggle('hidden');
   });
 
-  navbarLangToggle.addEventListener('click', function () {
+  navbarLangToggle && navbarLangToggle.addEventListener('click', function () {
     navbarMenu.classList.add('hidden');
-    navbarLang.classList.toggle('hidden');
+    navbarLang && navbarLang.classList.toggle('hidden');
   });
 })();

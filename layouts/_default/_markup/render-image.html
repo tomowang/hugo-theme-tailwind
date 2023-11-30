@@ -1,0 +1,27 @@
+<!-- code from https://discourse.gohugo.io/t/native-image-lazy-loading-with-hugo/28876/4 -->
+<!-- get image URL from Markdown tag -->
+{{- $src := ( .Destination | safeURL ) -}}
+<!-- get actual filename -->
+{{- $src = path.Base $src -}}
+<!-- check if it exists as a page resource -->
+{{- with (.Page.Resources.ByType "image").GetMatch ( printf "**%s" $src ) -}}
+  {{- $process := "webp" -}}
+  <!-- resize if wider than 800px -->
+  {{- if (gt .Width "800") }}
+  {{- $process = "resize 800x webp" -}}
+  {{ end -}}
+  {{- with .Process $process }}
+  <img src="{{ .RelPermalink }}"
+    width="{{ .Width }}"
+    height="{{ .Height }}"
+    alt="{{ $.Text }}" {{ with $.Title }} title="{{ . }}" {{ end }}
+    loading="lazy"
+  >
+  {{ end -}}
+<!-- or otherwise simply load the URL -->
+{{- else -}}
+  <img src="{{ .Destination | safeURL }}"
+    alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
+    loading="lazy"
+  >
+{{- end -}}

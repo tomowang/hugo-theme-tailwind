@@ -29,7 +29,10 @@
   <footer class="flex flex-none justify-center">
     {{ partial "footer.html" . }}
   </footer>
-  {{ $built := resources.Get "js/main.js" | js.Build "main.js" }}
+  {{- $built := resources.Get "js/main.js" | js.Build "main.js" -}}
+  {{- if not .Site.IsServer }}
+    {{- $built = $built | minify | fingerprint -}}
+  {{ end -}}
   <script src="{{ $built.RelPermalink }}"></script>
   {{ partial "extended_footer.html" . }}
 </body>

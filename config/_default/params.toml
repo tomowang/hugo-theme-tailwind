@@ -10,6 +10,8 @@ contentTypeName = "posts"
 # Alternatively, add this param to post front matter for specific posts
 toc = true
 
+showReadingTime = true
+
 [header]
   logo = "https://placehold.co/512/webp"
 

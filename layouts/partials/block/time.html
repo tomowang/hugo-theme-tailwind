@@ -1,22 +1,24 @@
-{{ if .Date }}
+<div class="flex flex-col gap-y-1 md:flex-row md:gap-y-0 md:gap-x-4 text-slate-500 dark:text-slate-300">
+{{- if .Date }}
   {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
   {{ $dateHuman := .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
-  <div class="flex flex-row text-base">
+  <div class="flex flex-row text-base gap-x-1">
     <i class="h-6 w-6 flex-none">
       {{ partial "icon" "calendar" }}
     </i>
-    <time class="ml-2" datetime="{{ $dateMachine }}">
+    <time datetime="{{ $dateMachine }}">
       {{ $dateHuman }}
     </time>
   </div>
-  {{ end }}
-  {{ if $.Site.Params.ShowReadingTime }}
-  <div class="flex flex-row text-base ml-6">
+{{ end -}}
+{{- if $.Site.Params.showReadingTime }}
+  <div class="flex flex-row text-base gap-x-1">
     <i class="h-6 w-6 flex-none">
       {{ partial "icon" "hourglass-high" }}
     </i>
-    <span class="ml-2">
-      {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}
+    <span>
+      {{ T "reading_time" .ReadingTime }}
     </span>
   </div>
-{{ end }}
+{{ end -}}
+</div>

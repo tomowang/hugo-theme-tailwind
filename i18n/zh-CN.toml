@@ -1,6 +1,9 @@
 table_of_contents = "目录"
 open_main_menu = "打开菜单"
 open_lang_switcher = "打开语言切换"
+[reading_time]
+  one = "阅读时长{{ .Count }}分钟"
+  other = "阅读时长{{ .Count }}分钟"
 
 [header]
 darkmode_toggle = "切换夜间模式"

@@ -9,6 +9,7 @@ Hugo theme build using [Tailwind CSS](https://tailwindcss.com/), mostly for blog
 
 ## Features
 
+ * High Lighthouse score
  * Dark mode - switch between light and dark mode, or default by system prefers.
  * SVG icons thanks to [tabler icons](https://tabler-icons.io/)
  * Google Analystics - add your Google Analytics ID to `hugo.toml`
@@ -17,6 +18,7 @@ Hugo theme build using [Tailwind CSS](https://tailwindcss.com/), mostly for blog
  * Additional short code: bilibili, asciinema
  * Responsive design
  * Multilingual
+ * Default image process for lazy load and srcset
 
 ## Installation
 
@@ -47,7 +49,7 @@ theme = "tailwind"
 [params]
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
-  contentTypeName = "post"
+  contentTypeName = "posts"
 
   [params.header]
     logo = "logo.webp"
@@ -61,13 +63,13 @@ theme = "tailwind"
   [[menu.main]]
     identifier = "post"
     name = "Post"
-    url = "/post/"
+    pageRef = "/posts"
     weight = 0
 
   [[menu.main]]
     identifier = "about"
     name = "About"
-    url = "/about/"
+    pageRef = "/about"
     weight = 10
 
 [taxonomies]
@@ -106,11 +108,10 @@ use `pnpm install` to install dependencies.
 
 The CSS process is inspired by [hugo-tailwindcss-starter-theme](https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme).
 
- * Development: `npm run dev`, this will generate css for theme users.
+ * Development: `npm run dev`, this will generate css for theme users and start example site.
 
-Test example site: `HUGO_THEME_DEVELOPMENT=true hugo server -s exampleSite --gc --themesDir=../..`
-(exampleSite is fetched from https://github.com/gohugoio/hugoBasicExample
-with some modifications).
+> `exampleSite is` fetched from https://github.com/gohugoio/hugoBasicExample
+with some modifications.
 
 ### Add new icons
 

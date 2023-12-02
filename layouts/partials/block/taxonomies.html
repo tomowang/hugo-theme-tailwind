@@ -1,10 +1,10 @@
 {{ if (or .Params.categories .Params.tags) }}
-  <ul class="flex flex-row flex-wrap text-slate-400">
+  <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
     {{ if .Params.categories }}
       {{ range .Params.categories }}
       <li>
         <a href="{{ (urlize (printf "categories/%s" . )) | relLangURL }}/"
-          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-400 bg-emerald-400 text-slate-50">
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
           {{ . }}
         </a>
       </li>

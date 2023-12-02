@@ -10,7 +10,7 @@
     {{ range sort site.Menus.main "Weight" }}
       {{ if not .HasChildren }}
         <li id="{{ .Identifier }}" class="">
-          <a class="block px-3 py-3 hover:text-emerald-500"
+          <a class="block px-3 py-3 hover:text-emerald-600"
             href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
         </li>
       {{ end }}

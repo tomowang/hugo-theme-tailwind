@@ -21,7 +21,7 @@
         <ul class="flex flex-col rounded-sm px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
         {{ range .Site.Home.AllTranslations.ByWeight }}
           <li class="">
-            <a class="block px-3 py-3 hover:text-emerald-500"
+            <a class="block px-3 py-3 hover:text-emerald-600"
               href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>
           </li>
         {{ end }}
@@ -34,7 +34,7 @@
   {{ end }}
   <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
     <label class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600">
-      <input type="checkbox" class="sr-only peer">
+      <input type="checkbox" class="sr-only peer" aria-label="{{ T "header.darkmode_toggle" }}">
       <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
         <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
           {{ partial "icon" "brightness-down" }}

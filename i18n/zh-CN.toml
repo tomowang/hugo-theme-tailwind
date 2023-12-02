@@ -3,6 +3,9 @@ table_of_contents = "目录"
 open_main_menu = "打开菜单"
 open_lang_switcher = "打开语言切换"
 
+[header]
+darkmode_toggle = "切换夜间模式"
+
 [404]
 go_back_home = "回到首页"
 sorry = "对不起，暂未找到您请求的页面"

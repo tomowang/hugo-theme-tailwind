@@ -7,9 +7,9 @@ description = 'Clean card Hugo theme for blog, created by using tailwindcss'
 homepage = 'https://github.com/tomowang/hugo-theme-tailwind'
 
 # If you have a running demo of the theme
-demosite = 'https://tomo.dev'
+demosite = 'https://hugo-theme-tailwind.tomo.dev/'
 
-version = "0.1.0"
+version = "1.0.0"
 
 # Taxonomy terms
 tags = ['blog', 'tailwindcss', 'responsive', 'multilingual', 'dark', 'personal']
@@ -19,6 +19,7 @@ features = [
   "table of contents",
   "katex",
   "tabler icons",
+  "multilingual",
 ]
 
 

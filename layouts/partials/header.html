@@ -33,8 +33,8 @@
   <div class="flex-none mx-1"></div>
   {{ end }}
   <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
-    <label class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="{{ T "header.darkmode_toggle" }}">
-      <input type="checkbox" class="sr-only peer" aria-label="{{ T "header.darkmode_toggle" }}">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="{{ T "header.darkmode_toggle" }}">
+      <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="{{ T "header.darkmode_toggle" }}">
       <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
         <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
           {{ partial "icon" "brightness-down" }}

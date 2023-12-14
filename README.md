@@ -5,7 +5,7 @@
 [![gohugo](https://img.shields.io/badge/Made_with-Hugo-blue)](https://gohugo.io/)
 [![tailwindcss](https://img.shields.io/badge/Made_with-Tailwind_CSS-blue)](https://tailwindcss.com/)
 
-Hugo theme build using [Tailwind CSS](https://tailwindcss.com/), mostly for bloggers.
+Hugo theme built using [Tailwind CSS](https://tailwindcss.com/), mostly for bloggers.
 
 Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.dev/) for demo.
 
@@ -14,7 +14,7 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
  * High Lighthouse score
  * Dark mode - switch between light and dark mode, or default by system prefers.
  * SVG icons thanks to [tabler icons](https://tabler-icons.io/)
- * Google Analystics - add your Google Analytics ID to `hugo.toml`
+ * Google Analytics - add your Google Analytics ID to `hugo.toml`
  * Comments settings for [disqus](https://disqus.com/) and [giscus](https://giscus.app/)
  * Social media link data settings
  * Additional short code: bilibili, asciinema
@@ -26,7 +26,7 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
 
 ### Git
 
-You can add the theme as a submodule by running the following command in the
+Add the theme as a submodule by running the following command in the
 root directory of your Hugo site:
 
 ```bash
@@ -37,7 +37,7 @@ git submodule update --remote
 
 ## Configuration
 
-You can use following configuration for basic usage.
+You can use the following configuration for basic usage.
 
 ```toml
 baseURL = "https://examnple.com/"

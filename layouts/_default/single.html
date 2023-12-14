@@ -5,10 +5,10 @@
       <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
     </h1>
 
-    {{ partial "block/desc" . }}
-    {{ partial "block/taxonomies" .}}
+    {{ partial "block/desc.html" . }}
+    {{ partial "block/taxonomies.html" .}}
 
-    {{ partial "block/time" . }}
+    {{ partial "block/time.html" . }}
 
     {{ if or .Params.Toc $.Site.Params.Toc }}
       {{ if ne .Params.Toc false }}
@@ -23,7 +23,7 @@
       {{ .Content | safeHTML }}
     </article>
 
-    {{ partial "comments" . }}
+    {{ partial "comments.html" . }}
   </div>
 </div>
 {{ end }}

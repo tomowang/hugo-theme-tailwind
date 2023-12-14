@@ -1,10 +1,10 @@
 <section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
   <div class="flex flex-row">
-    {{ partial "social_media" . }}
+    {{ partial "social_media.html" . }}
   </div>
   <div class="grow"></div>
   <div class="flex flex-row">
-    {{- $CopyrightSign := (printf `<i class="h-6 w-6 flex-none">%s</i>` (partial "icon" "copyright")) -}}
+    {{- $CopyrightSign := (printf `<i class="h-6 w-6 flex-none">%s</i>` (partial "icon.html" "copyright")) -}}
     {{- $SinceYear := .Site.Params.footer.since -}}
     {{- $CurrentYear := now.Format "2006" -}}
     {{- $Copyright := .Site.Copyright -}}

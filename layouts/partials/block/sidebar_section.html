@@ -7,7 +7,7 @@
   <div class="flex flex-row">
     <a class="flex flex-row" href='{{ (site.GetPage $taxonomy).RelPermalink }}'>
       <i class="h-6 w-6 flex-none">
-        {{ partial "icon" $icon }}
+        {{ partial "icon.html" $icon }}
       </i>
       <h2 class="pl-1 uppercase">
         {{ T (printf "taxonomies.%s" $taxonomy) | safeHTML }}

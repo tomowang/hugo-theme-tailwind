@@ -3,7 +3,7 @@
   {{ if .Paginator.HasPrev }}
     <a href="{{ .Paginator.Prev.URL }}"
       class="flex flex-row text-base font-semibold rounded-md text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-gray-700 p-2 pr-3">
-      <i class="h-6 w-6 flex-none mr-1">{{ partial "icon" "caret-left" }}</i>
+      <i class="h-6 w-6 flex-none mr-1">{{ partial "icon.html" "caret-left" }}</i>
       <span>{{ T "paginator.newer_posts" }}</span>
     </a>
   {{ end }}
@@ -11,7 +11,7 @@
     <a href="{{ .Paginator.Next.URL }}"
       class="flex flex-row text-base font-semibold rounded-md text-slate-700 dark:text-slate-300 bg-slate-200 dark:bg-gray-700 p-2 pl-3">
       <span>{{ T "paginator.older_posts" }}</span>
-      <i class="h-6 w-6 flex-none ml-1">{{ partial "icon" "caret-right" }}</i>
+      <i class="h-6 w-6 flex-none ml-1">{{ partial "icon.html" "caret-right" }}</i>
     </a>
   {{ end }}
 </div>

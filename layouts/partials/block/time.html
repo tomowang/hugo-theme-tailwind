@@ -4,7 +4,7 @@
   {{ $dateHuman := .Date.Format ($.Site.Params.DateFormatList | default "2006-01-02") }}
   <div class="flex flex-row text-base gap-x-1">
     <i class="h-6 w-6 flex-none">
-      {{ partial "icon" "calendar" }}
+      {{ partial "icon.html" "calendar" }}
     </i>
     <time datetime="{{ $dateMachine }}">
       {{ $dateHuman }}
@@ -14,7 +14,7 @@
 {{- if $.Site.Params.showReadingTime }}
   <div class="flex flex-row text-base gap-x-1">
     <i class="h-6 w-6 flex-none">
-      {{ partial "icon" "hourglass-high" }}
+      {{ partial "icon.html" "hourglass-high" }}
     </i>
     <span>
       {{ T "reading_time" .ReadingTime }}

@@ -125,6 +125,6 @@ you can use the following code.
 
 ```html
 <i class="h-6 w-6 flex-none">
-  {{ partial "icon" "brightness-down" }}
+  {{ partial "icon.html" "brightness-down" }}
 </i>
 ```

@@ -27,13 +27,13 @@
   const navbarLangToggle = document.getElementById('navbar-lang-toggle');
   const navbarLang = document.getElementById('navbar-lang');
 
-  navbarMenuToggle.addEventListener('click', function () {
+  navbarMenuToggle && navbarMenuToggle.addEventListener('click', function () {
     navbarLang && navbarLang.classList.add('hidden');
-    navbarMenu.classList.toggle('hidden');
+    navbarMenu && navbarMenu.classList.toggle('hidden');
   });
 
   navbarLangToggle && navbarLangToggle.addEventListener('click', function () {
-    navbarMenu.classList.add('hidden');
+    navbarMenu && navbarMenu.classList.add('hidden');
     navbarLang && navbarLang.classList.toggle('hidden');
   });
 })();

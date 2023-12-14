@@ -19,7 +19,7 @@
         {{ range (.Paginate $pages).Pages }}
           <article class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
             <h2 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
-              <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+              <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
             </h2>
 
             {{ partial "block/desc" . }}

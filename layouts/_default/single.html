@@ -2,7 +2,7 @@
 <div class="w-full max-w-4xl lg:max-w-5xl">
   <div class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
     <h1 class="text-4xl font-semibold text-slate-800 dark:text-slate-100">
-      <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
     </h1>
 
     {{ partial "block/desc" . }}

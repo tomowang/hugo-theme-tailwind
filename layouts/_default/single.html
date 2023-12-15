@@ -5,7 +5,11 @@
       <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
     </h1>
 
-    {{ partial "block/desc.html" . }}
+    {{ with .Description }}
+    <h2 class="my-4 text-large text-slate-600 dark:text-slate-300">
+      {{ . | $.Page.RenderString }}
+    </h2>
+    {{ end }}
     {{ partial "block/taxonomies.html" .}}
 
     {{ partial "block/time.html" . }}

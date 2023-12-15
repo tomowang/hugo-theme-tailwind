@@ -112,7 +112,7 @@ The CSS process is inspired by [hugo-tailwindcss-starter-theme](https://github.c
 
  * Development: `npm run dev`, this will generate css for theme users and start example site.
 
-> `exampleSite is` fetched from https://github.com/gohugoio/hugoBasicExample
+> `exampleSite` is fetched from https://github.com/gohugoio/hugoBasicExample
 with some modifications.
 
 ### Add new icons

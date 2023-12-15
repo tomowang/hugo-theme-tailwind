@@ -85,7 +85,7 @@ For advanced usage, please refer to config directory `config/_default` and
 Some of the configuration options are:
 
  * `markup`: goldmark and options for markdown rendering
- * `params.header`: header settings (logo for now)
+ * `params.header`: header settings (logo and sticky navbar)
  * `params.footer`: footer settings (copyright years, powered by, etc.)
  * `contentTypeName`: dir name of your blog content (default is `content/posts`).
  * `params.taxonomies.icons`: icons for taxonomies (categories, tags, series, etc.).

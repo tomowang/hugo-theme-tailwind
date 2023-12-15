@@ -1149,8 +1149,16 @@ video {
   top: 0px;
 }
 
+.top-10 {
+  top: 2.5rem;
+}
+
 .top-16 {
   top: 4rem;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .z-50 {

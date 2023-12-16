@@ -6,7 +6,7 @@
   </div>
   <div class="flex-1"></div>
   <div class="flex-none">
-    {{ partial "menu.html" }}
+    {{ partial "menu.html" . }}
   </div>
   {{ if (gt .Site.Home.AllTranslations.Len 1) }}
   <div class="flex-none">

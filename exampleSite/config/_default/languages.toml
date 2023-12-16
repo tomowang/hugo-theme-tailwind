@@ -2,34 +2,34 @@
   languageCode = 'en-US'
   languageDirection = 'ltr'
   languageName = 'English'
-  weight = 0
+  weight = 1
   [en.menu]
   [[en.menu.main]]
     identifier = "post"
     name = "Post"
     pageRef = "post"
-    weight = 0
+    weight = 10
 
   [[en.menu.main]]
     identifier = "about"
     name = "About"
     pageRef = "about"
-    weight = 10
+    weight = 20
 
 [zh-cn]
   languageCode = 'zh-CN'
   languageDirection = 'ltr'
   languageName = '中文'
-  weight = 1
+  weight = 2
   [zh-cn.menu]
   [[zh-cn.menu.main]]
     identifier = "post"
     name = "文章"
     pageRef = "post"
-    weight = 0
+    weight = 10
 
   [[zh-cn.menu.main]]
     identifier = "about"
     name = "关于"
     pageRef = "about"
-    weight = 10
+    weight = 20

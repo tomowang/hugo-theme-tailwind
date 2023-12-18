@@ -27,13 +27,17 @@
   const navbarLangToggle = document.getElementById('navbar-lang-toggle');
   const navbarLang = document.getElementById('navbar-lang');
 
-  navbarMenuToggle && navbarMenuToggle.addEventListener('click', function () {
-    navbarLang && navbarLang.classList.add('hidden');
-    navbarMenu && navbarMenu.classList.toggle('hidden');
-  });
-
-  navbarLangToggle && navbarLangToggle.addEventListener('click', function () {
-    navbarMenu && navbarMenu.classList.add('hidden');
-    navbarLang && navbarLang.classList.toggle('hidden');
+  document.addEventListener('click', function (event) {
+    const target = event.target;
+    if (navbarMenuToggle.contains(target)) {
+      navbarLang && navbarLang.classList.add('hidden');
+      navbarMenu && navbarMenu.classList.toggle('hidden');
+    } else if (navbarLangToggle.contains(target)) {
+      navbarMenu && navbarMenu.classList.add('hidden');
+      navbarLang && navbarLang.classList.toggle('hidden');
+    } else {
+      navbarMenu && navbarMenu.classList.add('hidden');
+      navbarLang && navbarLang.classList.add('hidden');
+    }
   });
 })();

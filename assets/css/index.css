@@ -12,9 +12,16 @@
   stroke: white;
 }
 
-/*
-! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
-*/
+.highlight {
+  position: relative;
+}
+
+.highlight .icon-tabler.icon-tabler-check {
+  stroke: rgb(74 222 128);
+  /* tailwindcss green-400 */
+}
+
+/* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -1145,8 +1152,16 @@ video {
   right: 0px;
 }
 
+.right-1 {
+  right: 0.25rem;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-1 {
+  top: 0.25rem;
 }
 
 .top-10 {

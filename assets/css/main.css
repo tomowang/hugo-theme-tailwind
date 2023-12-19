@@ -9,6 +9,15 @@
   fill: white;
   stroke: white;
 }
+
+.highlight {
+  position: relative;
+}
+
+.highlight .icon-tabler.icon-tabler-check {
+  stroke: rgb(74 222 128); /* tailwindcss green-400 */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -19,7 +19,7 @@
   document.querySelectorAll(".highlight").forEach((highlightDiv) => createCopyButton(highlightDiv));
 
   async function copyCodeToClipboard(button, highlightDiv) {
-    const codeToCopy = highlightDiv.querySelector("code").innerText;
+    const codeToCopy = highlightDiv.querySelector("code").textContent;
     try {
       var result = await navigator.permissions.query({ name: "clipboard-write" });
       if (result.state == "granted" || result.state == "prompt") {

@@ -18,7 +18,7 @@ enableEmoji = true
 
 [markup]
 [markup.highlight]
-  # lineNos = true // this has css issue when using class
+  # lineNos = true
   noClasses = false
 [markup.goldmark]
   [markup.goldmark.renderer]

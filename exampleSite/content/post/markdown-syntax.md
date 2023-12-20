@@ -73,7 +73,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-
 
 ### Code block with backticks
 
-```html
+```html {linenos=true}
 <!doctype html>
 <html lang="en">
 <head>

@@ -1,0 +1,28 @@
+table_of_contents = "Содержание"
+open_main_menu = "Открыть главное меню"
+open_lang_switcher = "Открыть переключатель языка"
+[reading_time]
+  one = "Одну минуту для чтения"
+  other = "{ .Count } минут для чтения"
+
+[header]
+darkmode_toggle = "Включить темный режим"
+
+[404]
+go_back_home = "Вернуться на главную"
+sorry = "Извините, мы не смогли найти страницу, которую вы ищете."
+page_not_found = "Страница не найдена"
+
+[footer]
+powered_by = "Работает на { .Generator } { .Heart } { .Theme }"
+copyright_with_since ="{ .CopyrightSign } { .SinceYear } - { .CurrentYear} { .Copyright }"
+copyright_wo_since ="{ .CopyrightSign } { .CurrentYear} { .Copyright }"
+
+[paginator]
+newer_posts = "Более новые сообщения"
+older_posts = "Более старые сообщения"
+
+[taxonomies]
+categories = "Категории"
+tags = "Теги"
+series = "Серии"

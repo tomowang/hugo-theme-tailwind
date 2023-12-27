@@ -1,0 +1,28 @@
+table_of_contents = "目次"
+open_main_menu = "メインメニューを開く"
+open_lang_switcher = "言語スイッチャーを開く"
+[reading_time]
+  one = "1分読む"
+  other = "{ .Count }分読む"
+
+[header]
+darkmode_toggle = "ダークモードを切り替える"
+
+[404]
+go_back_home = "ホームに戻る"
+sorry = "申し訳ありませんが、ご希望のページが見つかりませんでした。"
+page_not_found = "ページが見つかりません"
+
+[footer]
+powered_by = "Powered by { .Generator } { .Heart } { .Theme }"
+copyright_with_since ="{ .CopyrightSign } { .SinceYear } - { .CurrentYear} { .Copyright }"
+copyright_wo_since ="{ .CopyrightSign } { .CurrentYear} { .Copyright }"
+
+[paginator]
+newer_posts = "新しい投稿"
+older_posts = "古い投稿"
+
+[taxonomies]
+categories = "カテゴリー"
+tags = "タグ"
+series = "シリーズ"

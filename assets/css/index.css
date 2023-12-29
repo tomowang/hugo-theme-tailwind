@@ -1105,6 +1105,22 @@ video {
   content: none;
 }
 
+.prose-quoteless :where(.prose-quoteless > ul > li > input:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.prose-quoteless :where(.prose-quoteless > ul > li > input:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
+.prose-quoteless :where(.prose-quoteless > ol > li > input:first-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-top: 0;
+}
+
+.prose-quoteless :where(.prose-quoteless > ol > li > input:last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  margin-bottom: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

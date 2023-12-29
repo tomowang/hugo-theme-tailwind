@@ -14,6 +14,18 @@ module.exports = {
             'blockquote p:first-of-type::after': { content: 'none' },
             'code::before': { content: 'none' },
             'code::after': { content: 'none' },
+            '> ul > li > input:first-child': {
+              marginTop: 0,
+            },
+            '> ul > li > input:last-child': {
+              marginBottom: 0,
+            },
+            '> ol > li > input:first-child': {
+              marginTop: 0,
+            },
+            '> ol > li > input:last-child': {
+              marginBottom: 0,
+            },
           },
         },
       },

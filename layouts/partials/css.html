@@ -8,6 +8,6 @@
 {{- if .Site.IsServer }}
   {{- $styles = $styles | resources.ExecuteAsTemplate (printf "css/main.dev.%v.css" now.UnixMilli) . -}}
 {{ else }}
-  {{- $styles = $styles | minify | fingerprint | resources.PostProcess -}}
+  {{- $styles = $styles | minify | fingerprint -}}
 {{ end -}}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">

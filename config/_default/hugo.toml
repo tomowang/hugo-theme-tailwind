@@ -12,10 +12,6 @@ ignoreErrors = ["error-remote-getjson"]
 enableRobotsTXT = true
 enableEmoji = true
 
-[build]
-  [build.buildStats]
-    enable = true
-
 [markup]
 [markup.highlight]
   # lineNos = true

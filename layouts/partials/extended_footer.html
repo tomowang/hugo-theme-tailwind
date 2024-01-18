@@ -1,1 +1,28 @@
+{{- $built := resources.Get "js/main.js" | js.Build "main.js" -}}
+{{- if not hugo.IsDevelopment }}
+  {{- $built = $built | minify | fingerprint -}}
+{{ end -}}
+<script src="{{ $built.RelPermalink }}"></script>
+
+{{- if (findRE "<pre" .Content 1) }}
+<!-- hidden element for JS to get inner element and tailwind to output related CSS classes -->
+<div class="hidden top-1 right-1" id="code-copy">
+  <i class="h-6 w-6 block">
+    {{ partial "icon.html" "copy" }}
+  </i>
+</div>
+<div class="hidden top-1 right-1" id="code-copy-done">
+  <i class="h-6 w-6 block">
+    {{ partial "icon.html" "check" }}
+  </i>
+</div>
+{{- $jsCopy := resources.Get "js/code-copy.js" | js.Build "code-copy.js" -}}
+{{- if not hugo.IsDevelopment }}
+  {{- $jsCopy = $jsCopy | minify | fingerprint -}}
+{{ end -}}
+<script src="{{ $jsCopy.RelPermalink }}"></script>
+{{ end -}}
+
 {{ if .Params.asciinema }}{{ partial "asciinema.html" . }}{{ end }}
+
+{{- partial "custom_footer.html" -}}

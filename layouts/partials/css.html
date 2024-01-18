@@ -1,7 +1,11 @@
 {{- $styles := resources.Get "css/index.css" -}}
+{{- $env := getenv "HUGO_THEME_DEVELOPMENT" -}}
+
+{{- if eq $env "true" }}
+  {{- $styles = resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") -}}
+{{ end -}}
 
 {{- if hugo.IsDevelopment }}
-  {{- $styles = resources.Get "css/main.css" | postCSS (dict "config" "./postcss.config.js") -}}
   {{- $styles = $styles | resources.ExecuteAsTemplate (printf "css/main.dev.%v.css" now.UnixMilli) . -}}
 {{ else }}
   {{- $styles = $styles | minify | fingerprint -}}

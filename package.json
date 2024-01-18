@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev-hugo": "hugo server -s exampleSite --gc --themesDir=../..",
+    "dev-hugo": "HUGO_THEME_DEVELOPMENT=true hugo server -s exampleSite --gc --themesDir=../..",
     "dev-tailwind": "npx tailwindcss -i assets/css/main.css -o assets/css/index.css --watch",
     "dev": "npm run dev-hugo & npm run dev-tailwind"
   },

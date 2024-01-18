@@ -4,6 +4,7 @@
 ![MIT license](https://img.shields.io/github/license/tomowang/hugo-theme-tailwind)
 [![gohugo](https://img.shields.io/badge/Made_with-Hugo-blue)](https://gohugo.io/)
 [![tailwindcss](https://img.shields.io/badge/Made_with-Tailwind_CSS-blue)](https://tailwindcss.com/)
+![GitHub Repo stars](https://img.shields.io/github/stars/tomowang/hugo-theme-tailwind)
 
 Hugo theme built using [Tailwind CSS](https://tailwindcss.com/), mostly for bloggers.
 
@@ -104,6 +105,19 @@ link = 'https://www.facebook.com/'
 ```
 
 ## Development
+
+### Extend functionality
+
+The theme folder structure is as follows:
+
+![hugo theme layout stracture](https://raw.githubusercontent.com/tomowang/hugo-theme-tailwind/main/images/hugo-theme-layout-structure.png)
+
+You can extend the theme by creating following files in your site folder:
+
+* `layouts/partials/custom_head.html`
+* `layouts/partials/custom_footer.html`
+
+### Update stylesheets
 
 This theme use Tailwind CSS for styling. If you want to make some changes,
 use `pnpm install` to install dependencies.

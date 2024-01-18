@@ -30,7 +30,7 @@
     {{ partial "footer.html" . }}
   </footer>
   {{- $built := resources.Get "js/main.js" | js.Build "main.js" -}}
-  {{- if not .Site.IsServer }}
+  {{- if not hugo.IsDevelopment }}
     {{- $built = $built | minify | fingerprint -}}
   {{ end -}}
   <script src="{{ $built.RelPermalink }}"></script>
@@ -48,7 +48,7 @@
     </i>
   </div>
   {{- $jsCopy := resources.Get "js/code-copy.js" | js.Build "code-copy.js" -}}
-  {{- if not .Site.IsServer }}
+  {{- if not hugo.IsDevelopment }}
     {{- $jsCopy = $jsCopy | minify | fingerprint -}}
   {{ end -}}
   <script src="{{ $jsCopy.RelPermalink }}"></script>

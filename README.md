@@ -110,7 +110,7 @@ use `pnpm install` to install dependencies.
 
 The CSS process is inspired by [hugo-tailwindcss-starter-theme](https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme).
 
- * Development: `npm run dev`, this will generate css for theme users and start example site.
+ * Development: `pnpm dev`, this will generate css for theme users and start example site.
 
 > `exampleSite` is fetched from https://github.com/gohugoio/hugoBasicExample
 with some modifications.

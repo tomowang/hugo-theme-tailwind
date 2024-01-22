@@ -7,7 +7,7 @@ subtitle = "Example site for hugo-theme-tailwind"
 contentTypeName = "post"
 
 [header]
-  logo = "logo.webp"
+  logo = "logo.svg"
 
 [footer]
   since = 2022

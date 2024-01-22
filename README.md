@@ -1,5 +1,7 @@
 # Hugo Theme Tailwind
 
+<img align="right" width="128" alt="logo" src="https://raw.githubusercontent.com/tomowang/hugo-theme-tailwind/main/static/logo.svg">
+
 ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/tomowang/hugo-theme-tailwind/.github%2Fworkflows%2Fdeploy.yaml)
 ![MIT license](https://img.shields.io/github/license/tomowang/hugo-theme-tailwind)
 [![gohugo](https://img.shields.io/badge/Made_with-Hugo-blue)](https://gohugo.io/)

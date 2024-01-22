@@ -12,6 +12,8 @@ Hugo theme built using [Tailwind CSS](https://tailwindcss.com/), mostly for blog
 
 Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.dev/) for demo.
 
+![screenshot](https://raw.githubusercontent.com/tomowang/hugo-theme-tailwind/main/images/screenshot.png)
+
 ## Features
 
  * High Lighthouse score

@@ -3,7 +3,7 @@ open_main_menu = "Abrir menú principal"
 open_lang_switcher = "Abrir cambiador de idioma"
 [reading_time]
   one = "Un minuto de lectura"
-  other = "{ .Count } minutos de lectura"
+  other = "{{ .Count }} minutos de lectura"
 
 [header]
 darkmode_toggle = "Cambiar a modo oscuro"
@@ -14,9 +14,9 @@ sorry = "Lo siento, no pudimos encontrar la página que estás buscando."
 page_not_found = "Página no encontrada"
 
 [footer]
-powered_by = "Con tecnología de { .Generator } { .Heart } { .Theme }"
-copyright_with_since ="{ .CopyrightSign } { .SinceYear } - { .CurrentYear} { .Copyright }"
-copyright_wo_since ="{ .CopyrightSign } { .CurrentYear} { .Copyright }"
+powered_by = "Con tecnología de {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear }} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear }} {{ .Copyright }}"
 
 [paginator]
 newer_posts = "Entradas más recientes"

@@ -3,7 +3,7 @@ open_main_menu = "メインメニューを開く"
 open_lang_switcher = "言語スイッチャーを開く"
 [reading_time]
   one = "1分読む"
-  other = "{ .Count }分読む"
+  other = "{{ .Count }}分読む"
 
 [header]
 darkmode_toggle = "ダークモードを切り替える"
@@ -14,9 +14,9 @@ sorry = "申し訳ありませんが、ご希望のページが見つかりま�
 page_not_found = "ページが見つかりません"
 
 [footer]
-powered_by = "Powered by { .Generator } { .Heart } { .Theme }"
-copyright_with_since ="{ .CopyrightSign } { .SinceYear } - { .CurrentYear} { .Copyright }"
-copyright_wo_since ="{ .CopyrightSign } { .CurrentYear} { .Copyright }"
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear }} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear }} {{ .Copyright }}"
 
 [paginator]
 newer_posts = "新しい投稿"

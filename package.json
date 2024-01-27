@@ -2,11 +2,12 @@
   "scripts": {
     "dev-hugo": "HUGO_THEME_DEVELOPMENT=true hugo server -s exampleSite --gc --themesDir=../..",
     "dev-tailwind": "npx tailwindcss -i assets/css/main.css -o assets/css/index.css --watch",
-    "dev": "npm run dev-hugo & npm run dev-tailwind"
+    "dev": "run-p dev-hugo dev-tailwind"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.16",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
     "prettier": "^3.0.3",

@@ -5,6 +5,11 @@ open_lang_switcher = "Ouvrir le sélecteur de langue"
   one = "Une minute de lecture"
   other = "{{ .Count }} minutes de lecture"
 
+[search]
+title = "Rechercher"
+empty_result = "Aucun résultat trouvé."
+placeholder = "Rechercher..."
+
 [header]
 darkmode_toggle = "Activer le mode sombre"
 

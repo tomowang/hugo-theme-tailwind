@@ -5,6 +5,11 @@ open_lang_switcher = "言語スイッチャーを開く"
   one = "1分読む"
   other = "{{ .Count }}分読む"
 
+[search]
+title = "検索"
+empty_result = "結果なし"
+placeholder = "検索..."
+
 [header]
 darkmode_toggle = "ダークモードを切り替える"
 

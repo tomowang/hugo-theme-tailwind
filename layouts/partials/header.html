@@ -32,6 +32,14 @@
   {{ else }}
   <div class="flex-none mx-1"></div>
   {{ end }}
+  <div class="flex-none md:hidden">
+    <a href="/search/" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">{{ T "search.title" }}</span>
+      <i class="w-8 h-8">
+        {{ partial "icon.html" "search" }}
+      </i>
+    </a>
+  </div>
   <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
     <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="{{ T "header.darkmode_toggle" }}">
       <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="{{ T "header.darkmode_toggle" }}">

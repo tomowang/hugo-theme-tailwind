@@ -5,6 +5,11 @@ open_lang_switcher = "打开语言切换"
   one = "阅读时长{{ .Count }}分钟"
   other = "阅读时长{{ .Count }}分钟"
 
+[search]
+title = "搜索"
+empty_result = "无结果。"
+placeholder = "搜索..."
+
 [header]
 darkmode_toggle = "切换夜间模式"
 

@@ -26,6 +26,7 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
  * Responsive design
  * Multilingual
  * Default image process for lazy load and srcset
+ * Search (by using [fuse.js](https://fusejs.io/) and [mark.js](https://markjs.io/))
 
 ## Installation
 
@@ -96,6 +97,7 @@ Some of the configuration options are:
  * `params.taxonomies.icons`: icons for taxonomies (categories, tags, series, etc.).
  * `params.giscus`: giscus settings
  * `params.social_media`: social media links shown in the footer
+ * `params.search`: search settings
 
 For social media link data, you can refer entries in `params.social_media.items`
 (You can add more or disable exsited entries in `params.social_media.items`).

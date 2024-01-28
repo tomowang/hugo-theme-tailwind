@@ -1,0 +1,59 @@
+{{ define "title" }}
+<title>{{ T "search.title" }}</title>
+{{ end }}
+
+{{ define "head" }}
+  {{- with .OutputFormats.Get "json" -}}
+    <link rel="preload" href="{{ .RelPermalink }}" as="fetch" crossorigin="anonymous">
+  {{- end -}}
+{{ end }}
+
+{{ define "main" }}
+<div class="w-full max-w-4xl lg:max-w-5xl">
+  <form class="my-4 mx-2 md:mx-0" action="./" method="get">
+    <div class="flex">
+      <input type="text" name="search" id="search-input" required placeholder="{{ T "search.placeholder" }}" class="rounded-none rounded-s-lg border border-gray-300 text-slate-800 focus:outline-none focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm p-3  dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-slate-200 dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <button class="inline-flex items-center px-3 text-sm text-slate-900 bg-slate-200 border border-e-0 border-gray-300 rounded-e-lg dark:bg-slate-600 dark:text-slate-400 dark:border-slate-600">
+        <i class="h-6 w-6 flex-none">
+          {{ partial "icon.html" "search" }}
+        </i>
+      </button>
+    </div>
+  </form>
+  <div class="w-full max-w-4xl lg:max-w-5xl">
+    <section class="flex flex-col w-full" id="search-result"></section>
+    <section class="flex flex-col w-full">
+      <p id="search-result-empty" class="hidden mx-2 md:mx-0 text-lg font-semibold text-slate-800 dark:text-slate-200">{{ T "search.empty_result" }}</p>
+    </section>
+  </div>
+</div>
+
+<div class="hidden" id="tag-icon">
+  <i class="h-5 w-5 flex-none">
+    {{ partial "icon.html" site.Params.taxonomies.icons.tags }}
+  </i>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1"></script>
+
+{{- $dot := resources.Get "js/doT.js" | minify }}
+<script src="{{ $dot.RelPermalink }}"></script>
+
+<script type="text/javascript">
+  var searchOptions = {
+    summaryInclude: {{ site.Params.search.summaryInclude | default 180 }},
+    minMatchCharLength: {{ site.Params.search.minMatchCharLength | default 2 }},
+    threshold: {{ site.Params.search.threshold | default 0.3 }},
+  };
+</script>
+
+{{- $search := resources.Get "js/search.js" | js.Build "search.js" -}}
+{{- if not hugo.IsDevelopment }}
+  {{- $search = $search | minify | fingerprint -}}
+{{ else }}
+  {{- $search = $search | fingerprint -}}
+{{ end -}}
+<script src="{{ $search.RelPermalink }}"></script>
+
+{{ end }}

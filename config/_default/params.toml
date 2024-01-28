@@ -12,6 +12,11 @@ toc = true
 
 showReadingTime = true
 
+[search]
+  summaryInclude = 180 # show only part of content in search result.
+  minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
+  threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
+
 [header]
   logo = "https://placehold.co/512/webp"
   sticky = false

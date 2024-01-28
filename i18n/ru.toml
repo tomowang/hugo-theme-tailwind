@@ -5,6 +5,11 @@ open_lang_switcher = "Открыть переключатель языка"
   one = "Одну минуту для чтения"
   other = "{{ .Count }} минут для чтения"
 
+[search]
+title = "Поиск"
+empty_result = "Ничего не найдено."
+placeholder = "Поиск..."
+
 [header]
 darkmode_toggle = "Включить темный режим"
 

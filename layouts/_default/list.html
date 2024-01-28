@@ -29,7 +29,7 @@
           </article>
         {{ end }}
       </section>
-      <aside class="hidden md:flex flex-col md:w-1/3 mx-3 {{- if .Site.Params.header.sticky }} top-10 {{ else }} top-0 {{ end -}} sticky self-start">
+      <aside class="hidden md:flex flex-col md:w-1/3 ml-3 {{- if .Site.Params.header.sticky }} top-10 {{ else }} top-0 {{ end -}} sticky self-start">
         {{ partial "sidebar.html" . }}
       </aside>
     </div>

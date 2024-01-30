@@ -128,8 +128,6 @@ You can extend the theme by creating following files in your site folder:
 This theme use Tailwind CSS for styling. If you want to make some changes,
 use `pnpm install` to install dependencies.
 
-The CSS process is inspired by [hugo-tailwindcss-starter-theme](https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme).
-
  * Development: `pnpm dev`, this will generate css for theme users and start example site.
 
 > `exampleSite` is fetched from https://github.com/gohugoio/hugoBasicExample

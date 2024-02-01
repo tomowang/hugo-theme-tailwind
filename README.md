@@ -46,7 +46,7 @@ git submodule update --remote
 You can use the following configuration for basic usage.
 
 ```toml
-baseURL = "https://examnple.com/"
+baseURL = "https://example.com/"
 title = "Hugo Theme Tailwind Example Site"
 author = "Your Name"
 copyright = "Your Name"
@@ -100,7 +100,7 @@ Some of the configuration options are:
  * `params.search`: search settings
 
 For social media link data, you can refer entries in `params.social_media.items`
-(You can add more or disable exsited entries in `params.social_media.items`).
+(You can add more or disable existing entries in `params.social_media.items`).
 
 ```toml
 [[social_media.items]]
@@ -116,7 +116,7 @@ link = 'https://www.facebook.com/'
 
 The theme folder structure is as follows:
 
-![hugo theme layout stracture](https://raw.githubusercontent.com/tomowang/hugo-theme-tailwind/main/images/hugo-theme-layout-structure.png)
+![hugo theme layout structure](https://raw.githubusercontent.com/tomowang/hugo-theme-tailwind/main/images/hugo-theme-layout-structure.png)
 
 You can extend the theme by creating following files in your site folder:
 

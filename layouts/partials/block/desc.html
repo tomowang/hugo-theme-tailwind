@@ -1,11 +1,11 @@
 {{ with .Description }}
-  <h3 class="my-4 text-large text-slate-600 dark:text-slate-300">
+  <div class="my-4 text-large text-slate-600 dark:text-slate-300">
     {{ . | $.Page.RenderString }}
-  </h3>
+  </div>
 {{ else }}
-  {{ if .Truncated }}
-  <h3 class="my-4 text-large text-slate-600 dark:text-slate-300">
-    {{ .Summary }}
-  </h3>
+  {{ with .Summary }}
+  <div class="my-4 text-large text-slate-600 dark:text-slate-300">
+    {{ . | $.Page.RenderString }}
+  </div>
   {{ end }}
 {{ end }}

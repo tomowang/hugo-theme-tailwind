@@ -1,0 +1,33 @@
+table_of_contents = "विषय-सूची"
+open_main_menu = "मुख्य मेनू खोलें"
+open_lang_switcher = "भाषा स्विचर खोलें"
+[reading_time]
+  one = "पढ़ने में एक मिनट का समय लगेगा।"
+  other = "पढ़ने में {{ .Count }} मिनट का समय लगेगा।"
+
+[search]
+title = "खोजें"
+empty_result = "कोई परिणाम नहीं मिला।"
+placeholder = "खोजें..."
+
+[header]
+darkmode_toggle = "डार्क मोड टॉगल करें"
+
+[404]
+go_back_home = "होम पर वापस जाएं"
+sorry = "क्षमा करें, हम आपके द्वारा खोजे गए पेज को नहीं ढूँढ पाए।"
+page_not_found = "पेज नहीं मिला"
+
+[footer]
+powered_by = "{{ .Generator }} {{ .Heart }} {{ .Theme }} द्वारा संचालित"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "नई पोस्ट्स"
+older_posts = "पुरानी पोस्ट्स"
+
+[taxonomies]
+categories = "श्रेणियाँ"
+tags = "टैग्स"
+series = "श्रृंखला"

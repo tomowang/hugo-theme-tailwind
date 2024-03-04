@@ -19,7 +19,7 @@
       </button>
       <div class="absolute hidden top-16 z-50" id="navbar-lang">
         <ul class="flex flex-col rounded-sm px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
-        {{  range .Translations }}
+        {{ range .Translations }}
           <li class="">
             <a class="block px-3 py-3 hover:text-emerald-600"
               href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}</a>

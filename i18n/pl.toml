@@ -1,0 +1,33 @@
+table_of_contents = "Spis treści"
+open_main_menu = "Otwórz menu główne"
+open_lang_switcher = "Zmień język"
+[reading_time]
+  one = "Jedna minuta czytania"
+  other = "{{ .Count }} minut(y) czytania"
+
+[search]
+title = "Szukaj"
+empty_result = "Nie znaleziono wyników."
+placeholder = "Szukaj..."
+
+[header]
+darkmode_toggle = "Przełącz ciemny motyw"
+
+[404]
+go_back_home = "Powrót do strony głównej"
+sorry = "Przepraszamy, nie znaleźliśmy strony, której szukasz."
+page_not_found = "Strona nie odnaleziona"
+
+[footer]
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "Nowsze posty"
+older_posts = "Starsze posty"
+
+[taxonomies]
+categories = "Kategorie"
+tags = "Tagi"
+series = "Serie"

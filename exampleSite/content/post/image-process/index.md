@@ -10,3 +10,7 @@ toc = false
 ![Photo by Behnam Norouzi on Unsplash](./images/behnam-norouzi-_1ok63FFlM4-unsplash.jpg "Photo by Behnam Norouzi on Unsplash")
 
 ![placeholder](https://placeholder.co/1024x768/png "Test for external image")
+
+<p align="center" width="100%">
+    <img src="./images/logo.png">
+</p>

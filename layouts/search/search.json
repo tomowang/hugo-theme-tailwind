@@ -1,6 +1,8 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- $pages := where .Site.RegularPages "Params.hidden" "!=" true -}}
-{{- range $pages -}}
-    {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "content" .Plain "permalink" .Permalink) -}}
+{{- range .Site.Sites -}}
+    {{- $pages := where .RegularPages "Params.hidden" "!=" true -}}
+    {{- range $pages -}}
+        {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "content" .Plain "permalink" .Permalink) -}}
+    {{- end -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

@@ -12,6 +12,7 @@ placeholder = "Buscar..."
 
 [header]
 darkmode_toggle = "Cambiar a modo oscuro"
+no_translation = "No hay traducciones disponibles"
 
 [404]
 go_back_home = "Volver al inicio"

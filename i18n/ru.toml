@@ -12,6 +12,7 @@ placeholder = "Поиск..."
 
 [header]
 darkmode_toggle = "Включить темный режим"
+no_translation = "Нет доступных переводов"
 
 [404]
 go_back_home = "Вернуться на главную"

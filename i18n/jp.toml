@@ -12,6 +12,7 @@ placeholder = "検索..."
 
 [header]
 darkmode_toggle = "ダークモードを切り替える"
+no_translation = "他の言語はありません"
 
 [404]
 go_back_home = "ホームに戻る"

@@ -12,6 +12,7 @@ placeholder = "खोजें..."
 
 [header]
 darkmode_toggle = "डार्क मोड टॉगल करें"
+no_translation = "कोई अनुवाद उपलब्ध नहीं"
 
 [404]
 go_back_home = "होम पर वापस जाएं"

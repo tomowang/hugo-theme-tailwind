@@ -13,6 +13,7 @@ placeholder = "Szukaj..."
 
 [header]
 darkmode_toggle = "Przełącz ciemny motyw"
+no_translation = "Brak dostępnych tłumaczeń"
 
 [404]
 go_back_home = "Powrót do strony głównej"

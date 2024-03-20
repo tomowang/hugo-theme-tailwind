@@ -12,6 +12,7 @@ placeholder = "Search..."
 
 [header]
 darkmode_toggle = "Toggle dark mode"
+no_translation = "No translations available"
 
 [404]
 go_back_home = "Go back home"

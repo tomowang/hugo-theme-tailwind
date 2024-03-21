@@ -1356,6 +1356,10 @@ video {
   cursor: pointer;
 }
 
+.cursor-default {
+  cursor: default;
+}
+
 .flex-row {
   flex-direction: row;
 }

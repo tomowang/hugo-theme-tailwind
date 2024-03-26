@@ -26,6 +26,9 @@ module.exports = {
             '> ol > li > input:last-child': {
               marginBottom: 0,
             },
+            '.gist .highlight tbody tr': {
+              borderWidth: 0,
+            },
           },
         },
       },

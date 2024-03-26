@@ -14,6 +14,10 @@ Hugo ships with several [Built-in Shortcodes](https://gohugo.io/content-manageme
 <!--more-->
 ---
 
+## Github gist Shortcode
+
+{{< gist tomowang c29ef5bfc7eac018edc6307a43ffbf3d >}}
+
 ## YouTube Privacy Enhanced Shortcode
 
 {{< youtube ms32oqonz04 >}}

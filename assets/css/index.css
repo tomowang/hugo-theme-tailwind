@@ -1121,6 +1121,10 @@ video {
   margin-bottom: 0;
 }
 
+.prose-quoteless :where(.gist .highlight tbody tr):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+  border-width: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1352,12 +1356,12 @@ video {
   flex-grow: 1;
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .cursor-default {
   cursor: default;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-row {

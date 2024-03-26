@@ -14,6 +14,10 @@ Hugo 附带了几个用于丰富内容的[Shortcodes](https://gohugo.io/content-
 <!--more-->
 ---
 
+## Github gist Shortcode
+
+{{< gist tomowang c29ef5bfc7eac018edc6307a43ffbf3d >}}
+
 ## YouTube Privacy Enhanced Shortcode
 
 {{< youtube ms32oqonz04 >}}

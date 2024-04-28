@@ -16,6 +16,8 @@ categories = [
 ]
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
+# Photo by <a href="https://unsplash.com/@drucsko?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dávid Drucskó</a> on <a href="https://unsplash.com/photos/a-computer-screen-with-a-bunch-of-text-on-it-eZ_hyar3qqc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+image = "images/david-drucsko-eZ_hyar3qqc-unsplash.jpg"
 +++
 
 本文档提供可用于 Hugo 内容文件的基本 Markdown 语法示例，并且还展示了 Hugo 主题中是否用 CSS 修饰了 HTML 基本元素。

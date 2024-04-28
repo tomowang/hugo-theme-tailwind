@@ -4,6 +4,8 @@ title: Math Typesetting
 date: 2019-03-08
 description: A brief guide to setup KaTeX
 math: true
+# Photo by <a href="https://unsplash.com/@antoine1003?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Antoine Dautry</a> on <a href="https://unsplash.com/photos/mathematics-computation-05A-kdOH6Hw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+image: "/images/antoine-dautry-05A-kdOH6Hw-unsplash.jpg"
 ---
 
 Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
@@ -35,7 +37,7 @@ In this example we will be using [KaTeX](https://katex.org/)
 {{ end }}
 {{</ math.inline >}}
 
-### Examples
+## Examples
 
 {{< math.inline >}}
 <p>

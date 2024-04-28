@@ -17,15 +17,22 @@
     <div class="flex flex-row">
       <section class="flex flex-col w-full md:w-2/3">
         {{ range (.Paginate $pages).Pages }}
-          <article class="flex flex-col gap-y-3 p-6 mt-6 mx-2 md:mx-0 rounded-lg shadow-md bg-white dark:bg-gray-700">
-            <h2 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
-              <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
-            </h2>
+          <article class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+            <div>
+              <a href="{{ .RelPermalink }}">
+                {{ partial "block/image.html" . }}
+              </a>
+            </div>
+            <div class="flex flex-col gap-y-3 p-6">
+              <h2 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
+                <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
+              </h2>
 
-            {{ partial "block/desc.html" . }}
-            {{ partial "block/taxonomies.html" .}}
+              {{ partial "block/desc.html" . }}
+              {{ partial "block/taxonomies.html" .}}
 
-            {{ partial "block/time.html" . }}
+              {{ partial "block/time.html" . }}
+            </div>
           </article>
         {{ end }}
       </section>

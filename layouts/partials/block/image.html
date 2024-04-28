@@ -1,0 +1,41 @@
+{{- $alt := .Title -}}
+
+{{- $respSizes := slice "960" "1600" -}}
+{{- $hint := "photo" -}}
+{{- $filter := "box" -}}
+{{- if .Params.image -}}
+  {{- $dest := .Params.image | safeURL -}}
+  {{- $dest = path.Base $dest -}}
+  {{- with (.Resources.ByType "image").GetMatch ( printf "{**/%s,%s}" $dest $dest ) -}}
+  {{- $src := . -}}
+  {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+  {{- $actualImg := $src.Resize (print "640x jpg " $filter) -}}
+  <picture>
+    <source type="image/webp" srcset="
+    {{- with $respSizes -}}
+      {{- range $i, $e := . -}}
+        {{- if ge $src.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (print . "x webp " $hint " " $filter) ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}" sizes="{{ $dataSzes }}" />
+    <source type="image/jpeg" srcset="
+    {{- with $respSizes -}}
+      {{- range $i, $e := . -}}
+        {{- if ge $src.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (print . "x jpg " $filter) ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}" sizes="{{ $dataSzes }}" />
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
+  </picture>
+  <!-- or otherwise simply load the URL -->
+  {{- else -}}
+  <figure>
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="{{ .Params.image | safeURL }}"
+      alt="{{ $alt }}" title="{{ $alt }}"
+      loading="lazy"
+    >
+  </figure>
+  {{- end -}}
+{{- end -}}

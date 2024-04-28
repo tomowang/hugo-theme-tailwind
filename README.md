@@ -27,6 +27,7 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
  * Multilingual
  * Default image process for lazy load and srcset
  * Search (by using [fuse.js](https://fusejs.io/) and [mark.js](https://markjs.io/))
+ * Image support for article (using `image` param in front matter)
 
 ## Installation
 

@@ -8,6 +8,14 @@
   {{- $dest = path.Join (path.Dir $dest) (path.Base $dest) -}}
 
   {{- with .Resources.Get $dest -}}
+  {{- if eq .MediaType.SubType "svg" -}}
+  <figure>
+    <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="{{ .RelPermalink }}"
+      alt="{{ $alt }}" title="{{ $alt }}"
+      loading="lazy"
+    >
+  </figure>
+  {{- else -}}
   {{- $src := . -}}
   {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
   {{- $actualImg := $src.Resize (print "640x jpg " $filter) -}}
@@ -30,6 +38,7 @@
     {{- end -}}" sizes="{{ $dataSzes }}" />
     <img class="w-full object-cover h-36 md:h-48 xl:h-60" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
   </picture>
+  {{- end -}}
   <!-- or otherwise simply load the URL -->
   {{- else -}}
   <figure>

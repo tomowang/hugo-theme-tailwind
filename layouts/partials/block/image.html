@@ -5,8 +5,9 @@
 {{- $filter := "box" -}}
 {{- if .Params.image -}}
   {{- $dest := .Params.image | safeURL -}}
-  {{- $dest = path.Base $dest -}}
-  {{- with (.Resources.ByType "image").GetMatch ( printf "{**/%s,%s}" $dest $dest ) -}}
+  {{- $dest = path.Join (path.Dir $dest) (path.Base $dest) -}}
+
+  {{- with .Resources.Get $dest -}}
   {{- $src := . -}}
   {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
   {{- $actualImg := $src.Resize (print "640x jpg " $filter) -}}

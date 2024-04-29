@@ -8,11 +8,11 @@
 
 {{- $dest := ( .Destination | safeURL ) -}}
 <!-- get actual filename -->
-{{- $dest = path.Base $dest -}}
+{{- $dest = path.Join (path.Dir $dest) (path.Base $dest) -}}
 
 <div class="not-prose">
 <!-- check if it exists as a page resource -->
-{{- with (.Page.Resources.ByType "image").GetMatch ( printf "{**/%s,%s}" $dest $dest ) -}}
+{{- with .Page.Resources.Get $dest -}}
 {{- $src := . -}}
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{- $actualImg := $src.Resize (print "640x jpg " $filter) -}}

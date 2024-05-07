@@ -21,6 +21,8 @@ features = [
   "tabler icons",
   "multilingual",
   "search",
+  "image process",
+  "json-ld",
 ]
 
 

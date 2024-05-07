@@ -1,6 +1,5 @@
 baseURL = 'https://example.org/'
 title = 'My New Hugo Site'
-author = ""
 copyright = ""
 languageCode = 'en'
 defaultContentLanguage = "en"
@@ -11,6 +10,7 @@ enableInlineShortcodes = true
 ignoreErrors = ["error-remote-getjson"]
 enableRobotsTXT = true
 enableEmoji = true
+enableGitInfo = true
 
 [markup]
 [markup.highlight]

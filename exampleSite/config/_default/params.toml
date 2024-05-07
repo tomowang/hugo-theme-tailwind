@@ -6,6 +6,12 @@ subtitle = "Example site for hugo-theme-tailwind"
 # the list of set content will show up on your index page (baseurl).
 contentTypeName = "post"
 
+jsonLD = true
+
+[author]
+  name = "Xiaoliang Wang"
+  email = "user@example.com"
+
 [header]
   logo = "logo.svg"
 

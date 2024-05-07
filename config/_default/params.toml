@@ -12,6 +12,13 @@ toc = true
 
 showReadingTime = true
 
+# use structure json-ld for articles
+jsonLD = false
+
+[author]
+  name = "Hugo Author"
+  email = "user@example.com"
+
 [search]
   summaryInclude = 180 # show only part of content in search result.
   minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength

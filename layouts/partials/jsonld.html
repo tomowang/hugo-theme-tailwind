@@ -1,0 +1,26 @@
+{{- if or .Site.Params.jsonLD .Params.jsonLD -}}
+  {{- $ld := (dict "@context" "https://schema.org" "@type" "Article") -}}
+  {{- $ld = merge $ld (dict "name" .Title "url" .Permalink) -}}
+  {{- $ld = merge $ld (dict "description" (.Summary | plainify)) -}}
+  {{- $ld = merge $ld (dict "datePublished" .Date "dateModified" .Lastmod) -}}
+  {{- $author := default $.Site.Params.Author.Name $.Params.author -}}
+
+  {{- with $author -}}
+    {{- $ld = merge $ld (dict "author" (dict "@type" "Person" "name" .)) -}}
+  {{- end -}}
+
+  {{- if .Params.image -}}
+    {{- $dest := .Params.image | safeURL -}}
+    {{- $dest = path.Join (path.Dir $dest) (path.Base $dest) -}}
+    {{- with .Resources.Get $dest -}}
+      {{- $ld = merge $ld (dict "image" .Permalink) -}}
+    {{- else -}}
+      {{- /* direct image url */ -}}
+      {{- $ld = merge $ld (dict "image" (.Params.image | safeURL)) -}}
+    {{- end -}}
+  {{- end -}}
+
+<script type="application/ld+json">
+  {{ $ld }}
+</script>
+{{- end -}}

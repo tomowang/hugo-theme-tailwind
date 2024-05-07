@@ -1,6 +1,5 @@
 baseURL = "https://gohugo.io"
 title = "Hugo Theme Tailwind Example Site"
-author = "Xiaoliang Wang"
 copyright = "Xiaoliang Wang"
 paginate = 3 # for demonstration of pagination
 languageCode = "en"
@@ -10,6 +9,7 @@ enableInlineShortcodes = true
 # See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
 ignoreErrors = ["error-remote-getjson"]
 theme = "hugo-theme-tailwind"
+enableGitInfo = true
 
 [markup]
   _merge = "deep"

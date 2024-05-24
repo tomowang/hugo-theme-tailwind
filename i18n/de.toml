@@ -1,0 +1,33 @@
+table_of_contents = "Inhaltsverzeichnis"
+open_main_menu = "Hauptmenü öffnen"
+open_lang_switcher = "Sprache wechseln öffnen"
+[reading_time]
+  one = "Lesezeit eine Minute"
+  other = "Lesezeit {{ .Count }} Minuten"
+
+[search]
+title = "Suche"
+empty_result = "Kein Ergebnis gefunden."
+placeholder = "Suche..."
+
+[header]
+darkmode_toggle = "Dark Mode umschalten"
+
+[404]
+go_back_home = "Zurück zur Startseite"
+sorry = "Leider konnten wir die von Ihnen gesuchte Seite nicht finden."
+page_not_found = "Seite nicht gefunden"
+
+[footer]
+powered_by = "Powered by {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "Neuere Beiträge"
+older_posts = "Ältere Beiträge"
+
+[taxonomies]
+categories = "Kategorien"
+tags = "Tags"
+series = "Serie"

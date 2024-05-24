@@ -12,6 +12,8 @@ image = "images/hugo-logo-wide.svg"
 
 ![placeholder](https://placeholder.co/1024x768/png "Test for external image")
 
+![svg](./images/hugo-logo-wide.svg "Test for svg")
+
 <p align="center" width="100%">
     <img src="./images/logo.png">
 </p>

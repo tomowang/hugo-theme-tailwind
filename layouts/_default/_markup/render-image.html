@@ -12,8 +12,8 @@
 
 <div class="not-prose">
 <!-- check if it exists as a page resource -->
-{{- with and (ne (.Page.Resources.Get $dest).MediaType.SubType "svg") (.Page.Resources.Get $dest) -}}
-{{- $src := . -}}
+{{- if and (.Page.Resources.Get $dest) (ne (.Page.Resources.Get $dest).MediaType.SubType "svg") -}}
+{{- $src := .Page.Resources.Get $dest -}}
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
 {{- $actualImg := $src.Resize (print "640x jpg " $filter) -}}
   <picture>

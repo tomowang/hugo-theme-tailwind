@@ -1,24 +1,24 @@
 {{ if (or .Params.categories .Params.tags) }}
   <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
     {{ if .Params.categories }}
-      {{ range .Params.categories }}
+      {{ range (.GetTerms "categories") }}
       <li>
         <a href="{{ (urlize (printf "categories/%s" . )) | relLangURL }}/"
           class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
-          {{ . }}
+          {{ .LinkTitle }}
         </a>
       </li>
       {{ end }}
     {{ end }}
     {{ if .Params.tags }}
-      {{ range .Params.tags }}
+      {{ range (.GetTerms "tags") }}
       <li>
         <a href="{{ (urlize (printf "tags/%s" . )) | relLangURL }}/"
           class="flex flex-row text-sm mr-2 py-1">
           <i class="h-5 w-5 flex-none">
             {{ partial "icon.html" site.Params.taxonomies.icons.tags }}
           </i>
-          <span class="ml-0">{{ . }}</span>
+          <span class="ml-0">{{ .LinkTitle }}</span>
         </a>
       </li>
       {{ end }}

@@ -1,0 +1,33 @@
+table_of_contents = "Inhoudsopgave"
+open_main_menu = "Hoofdmenu openen"
+open_lang_switcher = "Taalwisseler openen"
+[reading_time]
+  one = "Eén minuut lezen"
+  other = "{{ .Count }} minuten om te lezen"
+
+[search]
+title = "Zoek"
+empty_result = "Geen resultaat gevonden."
+placeholder = "Zoek..."
+
+[header]
+darkmode_toggle = "Schakel de donkere modus in"
+
+[404]
+go_back_home = "Ga terug naar de hoofdpaginasta"
+sorry = "Sorry, De pagina kan helaas niet worden gevonden"
+page_not_found = "Pagina niet gevonden"
+
+[footer]
+powered_by = "Aangedreven door {{ .Generator }} {{ .Heart }} {{ .Theme }}"
+copyright_with_since ="{{ .CopyrightSign }} {{ .SinceYear }} - {{ .CurrentYear}} {{ .Copyright }}"
+copyright_wo_since ="{{ .CopyrightSign }} {{ .CurrentYear}} {{ .Copyright }}"
+
+[paginator]
+newer_posts = "Nieuwer post"
+older_posts = "Oudere posts"
+
+[taxonomies]
+categories = "Categorieën"
+tags = "Labels"
+series = "Serie"

@@ -1,0 +1,26 @@
+{{- $baseURL := absURL site.BaseURL }}
+{{- $iconPath := site.Params.pwa.icon }}
+{{- $icon := resources.Get $iconPath }}
+{{- $icons := slice }}
+{{- with $icon }}
+  {{- range site.Params.pwa.icon_sizes }}
+    {{- $sizes := printf "%dx%d" . . }}
+    {{- $icons = $icons | append (dict
+      "src" ($icon.Resize $sizes).Permalink
+      "sizes" $sizes
+      "type" $icon.MediaType.Type
+      )
+    }}
+  {{- end }}
+{{- else }}
+  {{- warnf "[pwa] the icon image doesn't exist: assets/%s." $iconPath }}
+{{- end }}
+{{- $default := dict
+  "name" site.Title
+  "display" "standalone"
+  "scope" $baseURL
+  "start_url" $baseURL
+  "icons" $icons
+}}
+{{- $params := site.Params.pwa.manifest }}
+{{- merge $default $params | jsonify -}}

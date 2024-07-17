@@ -9,6 +9,7 @@
   content="{{ with .Params.Keywords }}{{ delimit . ", " }}{{ else }}{{ $.Site.Params.Keywords }}{{ end }}"
 />
 <meta name="robots" content="noodp" />
+{{- if $.Site.Params.pwa.enabled }}<link rel="manifest" href="/manifest.json" />{{ end -}}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 

@@ -29,6 +29,7 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
  * Search (by using [fuse.js](https://fusejs.io/) and [mark.js](https://markjs.io/))
  * Image support for article (using `image` param in front matter)
  * Structured data [JSON-LD](https://json-ld.org/) for article (enable `jsonLD` in config file or front matter)
+ * Simple [PWA](https://web.dev/add-manifest/) support - check `params.pwa` in config file
 
 ## Installation
 
@@ -102,6 +103,7 @@ Some of the configuration options are:
  * `params.search`: search settings
  * `params.author`: author used in the JSON-LD
  * `params.jsonLD`: enable or disable JSON-LD (default disabled)
+ * `params.pwa`: enable or disable PWA (default disabled)
 
 For social media link data, you can refer entries in `params.social_media.items`
 (You can add more or disable existing entries in `params.social_media.items`).

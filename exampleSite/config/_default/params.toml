@@ -64,3 +64,14 @@ jsonLD = true
     title = 'Github'
     icon = 'brand-github'
     link = 'https://github.com/tomowang'
+
+[pwa]
+  enabled = true
+  icon = "logo.png" # should be in assets
+  icon_sizes = [192, 512]
+
+  # will be used as the manifest.json file and merge the default one
+  # https://developer.mozilla.org/en-US/docs/Web/Manifest
+  # https://web.dev/add-manifest/
+  [manifest]
+  description = "Example site for hugo-theme-tailwind"

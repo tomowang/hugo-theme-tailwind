@@ -75,13 +75,13 @@ theme = "tailwind"
     identifier = "post"
     name = "Post"
     pageRef = "/posts"
-    weight = 0
+    weight = 10
 
   [[menu.main]]
     identifier = "about"
     name = "About"
     pageRef = "/about"
-    weight = 10
+    weight = 20
 
 [taxonomies]
 category = "categories"

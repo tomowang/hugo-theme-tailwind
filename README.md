@@ -57,6 +57,9 @@ paginate = 10
 languageCode = "en"
 theme = "tailwind"
 
+[markup]
+  _merge = "deep"
+
 [params]
   # dir name of your blog content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).

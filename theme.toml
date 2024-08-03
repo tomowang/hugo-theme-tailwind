@@ -23,6 +23,7 @@ features = [
   "search",
   "image process",
   "json-ld",
+  "pwa",
 ]
 
 

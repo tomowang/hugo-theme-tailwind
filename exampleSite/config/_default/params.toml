@@ -8,6 +8,8 @@ contentTypeName = "post"
 
 jsonLD = true
 
+showAuthor = true
+
 [author]
   name = "Xiaoliang Wang"
   email = "user@example.com"

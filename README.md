@@ -105,6 +105,7 @@ Some of the configuration options are:
  * `params.social_media`: social media links shown in the footer
  * `params.search`: search settings
  * `params.author`: author used in the JSON-LD
+ * `params.showAuthor`: show author name in article list and article page
  * `params.jsonLD`: enable or disable JSON-LD (default disabled)
  * `params.pwa`: enable or disable PWA (default disabled)
 

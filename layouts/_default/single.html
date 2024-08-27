@@ -23,6 +23,7 @@
       {{ partial "block/taxonomies.html" .}}
 
       {{ partial "block/time.html" . }}
+      {{ partial "block/author.html" . }}
 
       {{ if or .Params.Toc $.Site.Params.Toc }}
         {{ if ne .Params.Toc false }}

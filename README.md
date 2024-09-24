@@ -33,7 +33,9 @@ Check [https://hugo-theme-tailwind.tomo.dev/](https://hugo-theme-tailwind.tomo.d
 
 ## Installation
 
-### Git
+You can install the theme by using git submodule or hugo module.
+
+### Git Submodule
 
 Add the theme as a submodule by running the following command in the
 root directory of your Hugo site:
@@ -43,6 +45,19 @@ git submodule add https://github.com/tomowang/hugo-theme-tailwind.git themes/tai
 # Or to update to the latest version
 git submodule update --remote
 ```
+
+### Hugo Module
+
+1. First, initialize module for your Hugo site: `hugo mod init github.com/username/xxxx`
+2. Then, add module import in your `hugo.toml`:
+
+```toml
+[module]
+  [[module.imports]]
+    path = "github.com/tomowang/hugo-theme-tailwind"
+```
+
+3. Finally, run `hugo mod get -u` to download the theme.
 
 ## Configuration
 

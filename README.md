@@ -171,3 +171,7 @@ you can use the following code.
   {{ partial "icon.html" "brightness-down" }}
 </i>
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=tomowang/hugo-theme-tailwind&type=Date)](https://star-history.com/#tomowang/hugo-theme-tailwind&Date)

@@ -61,6 +61,10 @@ git submodule update --remote
 
 ## Configuration
 
+> [!IMPORTANT]
+> The exampleSite's `giscus` setting uses my own profile repo.
+> You **SHOULD** change it to your own repo (by using <https://giscus.app/>).
+
 You can use the following configuration for basic usage.
 
 ```toml

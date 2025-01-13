@@ -1,7 +1,7 @@
 baseURL = "https://gohugo.io"
 title = "Hugo Theme Tailwind Example Site"
 copyright = "Xiaoliang Wang"
-paginate = 3 # for demonstration of pagination
+pagination.pagerSize = 3 # for demonstration of pagination
 languageCode = "en"
 defaultContentLanguage = "en"
 enableInlineShortcodes = true

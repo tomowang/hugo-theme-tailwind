@@ -72,7 +72,7 @@ baseURL = "https://example.com/"
 title = "Hugo Theme Tailwind Example Site"
 author = "Your Name"
 copyright = "Your Name"
-paginate = 10
+pagination.pagerSize = 10
 languageCode = "en"
 theme = "tailwind"
 

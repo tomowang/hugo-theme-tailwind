@@ -67,6 +67,12 @@ showAuthor = true
     icon = 'brand-github'
     link = 'https://github.com/tomowang'
 
+  [[social_media.items]]
+    enabled = true
+    title = 'Bluesky'
+    icon = 'brand-bluesky'
+    link = 'https://bsky.app/'
+
 [pwa]
   enabled = true
   icon = "logo.png" # should be in assets

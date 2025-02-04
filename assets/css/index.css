@@ -26,6 +26,7 @@
   transform-origin: 0 50%;
   animation: grow-progress auto linear;
   animation-timeline: scroll();
+  z-index: 999;
 }
 
 /*

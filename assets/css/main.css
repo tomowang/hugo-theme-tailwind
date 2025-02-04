@@ -11,14 +11,15 @@
 }
 
 @keyframes grow-progress {
-	from { transform: scaleX(0); }
-	to { transform: scaleX(1); }
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 #progress {
-	transform-origin: 0 50%;
-	animation: grow-progress auto linear;
-	animation-timeline: scroll();
+  transform-origin: 0 50%;
+  animation: grow-progress auto linear;
+  animation-timeline: scroll();
+  z-index: 999;
 }
 
 @tailwind base;

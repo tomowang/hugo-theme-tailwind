@@ -2,7 +2,8 @@ table_of_contents = "Содержание"
 open_main_menu = "Открыть главное меню"
 open_lang_switcher = "Открыть переключатель языка"
 [reading_time]
-  one = "Одну минуту для чтения"
+  one = "{{ .Count }} минуту для чтения"
+  few = "{{ .Count }} минуты для чтения"
   other = "{{ .Count }} минут для чтения"
 
 [search]

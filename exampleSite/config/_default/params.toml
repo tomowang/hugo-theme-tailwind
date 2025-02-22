@@ -16,6 +16,7 @@ showAuthor = true
 
 [header]
   logo = "logo.svg"
+  sticky = true
 
 [footer]
   since = 2022

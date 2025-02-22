@@ -1,7 +1,7 @@
 <div class="flex flex-row gap justify-between w-full max-w-4xl lg:max-w-5xl h-12 mt-3">
   <div class="flex-none ml-2 md:ml-0">
     <a href="{{ relLangURL "" }}" class="">
-      <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="{{ .Site.Params.header.logo | relURL }}" alt="logo">
+      <img class="h-12 w-12 rounded-full object-cover bg-zinc-100" src="{{ .Site.Params.header.logo | relURL }}" alt="logo">
     </a>
   </div>
   <div class="flex-1"></div>
@@ -11,14 +11,14 @@
   {{ if (gt .Site.Home.AllTranslations.Len 1) }}
   <div class="flex-none">
     <div class="h-full static">
-      <button id="navbar-lang-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+      <button id="navbar-lang-toggle" type="button" class="inline-flex items-center p-2 text-sm text-zinc-800 dark:text-zinc-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
         <span class="sr-only">{{ T "open_lang_switcher" }}</span>
         <i class="w-8 h-8">
           {{ partial "icon.html" "language" }}
         </i>
       </button>
       <div class="absolute hidden top-16 z-50" id="navbar-lang">
-        <ul class="flex flex-col rounded-sm px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+        <ul class="flex flex-col rounded-sm px-3 text-base font-medium text-zinc-800 dark:text-zinc-200 shadow-lg bg-white dark:bg-zinc-600 shadow-zinc-800/5 dark:shadow-zinc-200/5 ring-1 ring-zinc-900/5 dark:ring-zinc-100/5">
         {{- $page := . -}}
         {{ range .AllTranslations }}
           <li class="">
@@ -38,7 +38,7 @@
   <div class="flex-none mx-1"></div>
   {{ end }}
   <div class="flex-none md:hidden">
-    <a href={{ relLangURL "search/" }} class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
+    <a href={{ relLangURL "search/" }} class="inline-flex items-center p-2 text-sm text-zinc-800 dark:text-zinc-200 rounded-lg" aria-controls="navbar-menu" aria-expanded="false">
       <span class="sr-only">{{ T "search.title" }}</span>
       <i class="w-8 h-8">
         {{ partial "icon.html" "search" }}
@@ -46,9 +46,9 @@
     </a>
   </div>
   <div class="darkmode-toggle flex flex-none mr-2 md:mr-0">
-    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-gray-100 dark:bg-gray-600" title="{{ T "header.darkmode_toggle" }}">
+    <label for="darkmode-toggle" class="flex items-center px-3 cursor-pointer rounded-full bg-zinc-100 dark:bg-zinc-600" title="{{ T "header.darkmode_toggle" }}">
       <input name="darkmode-toggle" id="darkmode-toggle" type="checkbox" class="sr-only peer" aria-label="{{ T "header.darkmode_toggle" }}">
-      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-gray-700">
+      <div class="group flex flex-row gap-1 justify-center h-8 px-1 rounded-full bg-white dark:bg-zinc-700">
         <i class="h-6 w-6 flex-none rounded-full bg-yellow-400 place-self-center peer-checked:group-[]:invisible">
           {{ partial "icon.html" "brightness-down" }}
         </i>

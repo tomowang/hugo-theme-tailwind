@@ -1,4 +1,4 @@
-<section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-slate-500 dark:text-slate-300">
+<section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-zinc-500 dark:text-zinc-300">
   <div class="flex flex-row">
     {{ partial "social_media.html" . }}
   </div>
@@ -31,7 +31,7 @@
     {{- $Generator := `<a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>` -}}
     {{- $Theme := `<a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>` -}}
     {{- $Heart := `<span class="text-red-600">&hearts;</span>` }}
-    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-slate-300 dark:border-slate-400">
+    <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-zinc-300 dark:border-zinc-400">
       {{ T "footer.powered_by" (dict "Generator" $Generator "Theme" $Theme "Heart" $Heart ) | safeHTML }}
     </span>
   </div>

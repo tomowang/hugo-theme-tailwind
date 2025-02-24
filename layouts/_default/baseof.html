@@ -1,38 +1,51 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
-<head>
-  {{ block "title" . }}
-    {{- $title := "" -}}
-    {{- $siteTitle := $.Site.Title -}}
-    {{- $subtitle := $.Site.Params.Subtitle -}}
-    {{- $mainTitle := $siteTitle -}}
-    {{- if $subtitle -}}
-      {{- $mainTitle = printf "%s - %s" $siteTitle $subtitle -}}
-    {{- end -}}
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
 
-    {{- if .IsHome -}}
-      {{- $title = $mainTitle -}}
-    {{- else -}}
-      {{- $title = printf "%s :: %s" .Title $mainTitle -}}
-    {{- end -}}
-    <title>{{- $title -}}</title>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  {{ block "title" . }}
+  {{- $title := "" -}}
+  {{- $siteTitle := $.Site.Title -}}
+  {{- $subtitle := $.Site.Params.Subtitle -}}
+  {{- $mainTitle := $siteTitle -}}
+  {{- if $subtitle -}}
+  {{- $mainTitle = printf "%s - %s" $siteTitle $subtitle -}}
+  {{- end -}}
+
+  {{- if .IsHome -}}
+  {{- $title = $mainTitle -}}
+  {{- else -}}
+  {{- $title = printf "%s :: %s" .Title $mainTitle -}}
+  {{- end -}}
+  <title>{{- $title -}}</title>
   {{ end }}
   {{ partial "head.html" . }}
   {{ block "head" . }}{{ end }}
 </head>
-<body class="flex flex-col min-h-screen w-full bg-zinc-50 dark:bg-zinc-900">
+
+<body class="flex flex-col min-h-screen w-full bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-300 font-fira">
   {{- if hugo.IsDevelopment }}
-    {{ partial "tailwind-size-indicator.html" }}
+  {{ partial "tailwind-size-indicator.html" }}
   {{ end -}}
-  <header class="flex flex-none justify-center z-10 {{- if $.Site.Params.header.sticky }} bg-zinc-50 dark:bg-zinc-900 sticky top-0{{ end -}}">
+  <div class="absolute inset-0 w-full h-full overflow-hidden">
+    {{ partial "topwave.html" . }}
+  </div>
+  <header class="flex flex-none justify-center z-10 {{- if $.Site.Params.header.sticky }} sticky top-0 {{ end -}}">
     {{ partial "header.html" . }}
   </header>
   <main class="flex flex-auto justify-center">
     {{ block "main" . }}{{ end }}
   </main>
-  <footer class="flex flex-none justify-center">
+  <div class="inset-0 w-full h-full overflow-hidden">
+    {{ partial "bottomwave.html" . }}
+  </div>
+  <footer class="flex flex-none justify-center bg-zinc-200 dark:bg-zinc-950">
     {{ partial "footer.html" . }}
   </footer>
   {{ partial "extended_footer.html" . }}
 </body>
+
 </html>

@@ -1,4 +1,5 @@
-<section class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 text-zinc-500 dark:text-zinc-300">
+<section
+  class="flex flex-col md:flex-row mx-2 md:mx-0 gap-2 md:gap-0 justify-between w-full max-w-4xl lg:max-w-5xl py-6 bg-zinc-200 text-zinc-500 dark:text-zinc-300 dark:bg-zinc-950">
   <div class="flex flex-row">
     {{ partial "social_media.html" . }}
   </div>
@@ -10,26 +11,27 @@
     {{- $Copyright := .Site.Copyright -}}
 
     {{ if and (.Site.Params.footer.since)
-      (ne .Site.Params.footer.since (int (now.Format "2006")))
+    (ne .Site.Params.footer.since (int (now.Format "2006")))
     }}
-    {{ T "footer.copyright_with_since"  (dict
-      "CopyrightSign" $CopyrightSign
-      "SinceYear" $SinceYear
-      "CurrentYear" $CurrentYear
-      "Copyright" $Copyright
+    {{ T "footer.copyright_with_since" (dict
+    "CopyrightSign" $CopyrightSign
+    "SinceYear" $SinceYear
+    "CurrentYear" $CurrentYear
+    "Copyright" $Copyright
     ) | safeHTML }}
     {{ else }}
-    {{ T "footer.copyright_wo_since"  (dict
-      "CopyrightSign" $CopyrightSign
-      "CurrentYear" $CurrentYear
-      "Copyright" $Copyright
+    {{ T "footer.copyright_wo_since" (dict
+    "CopyrightSign" $CopyrightSign
+    "CurrentYear" $CurrentYear
+    "Copyright" $Copyright
     ) | safeHTML }}
     {{ end }}
   </div>
   {{ if .Site.Params.footer.poweredby }}
   <div class="flex flex-row">
     {{- $Generator := `<a href="https://gohugo.io" target="_blank" rel="noopener" class="underline">Hugo</a>` -}}
-    {{- $Theme := `<a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener" class="underline">Tailwind</a>` -}}
+    {{- $Theme := `<a href="https://github.com/tomowang/hugo-theme-tailwind" target="_blank" rel="noopener"
+      class="underline">Tailwind</a>` -}}
     {{- $Heart := `<span class="text-red-600">&hearts;</span>` }}
     <span class="ml-0 pl-0 md:ml-2 md:pl-2 border-l-0 md:border-l border-zinc-300 dark:border-zinc-400">
       {{ T "footer.powered_by" (dict "Generator" $Generator "Theme" $Theme "Heart" $Heart ) | safeHTML }}

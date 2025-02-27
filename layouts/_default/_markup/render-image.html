@@ -35,7 +35,7 @@
     {{- end -}}" sizes="{{ $dataSzes }}" />
     <img class="h-auto max-w-full rounded-lg" src="{{ $actualImg.RelPermalink }}" width="{{ $src.Width }}" height="{{ $src.Height }}" alt="{{ $alt }}" title="{{ $alt }}" loading="lazy" />
   </picture>
-  {{- with $caption -}}<p class="text-sm text-center text-slate-500 dark:text-slate-300">{{ $caption | $.Page.RenderString }}</p>{{- end }}
+  {{- with $caption -}}<p class="text-sm text-center text-neutral-500 dark:text-neutral-300">{{ $caption | $.Page.RenderString }}</p>{{- end }}
 <!-- or otherwise simply load the URL -->
 {{- else -}}
   <figure>
@@ -43,7 +43,7 @@
       alt="{{ .Text }}" {{ with .Title }} title="{{ . }}" {{ end }}
       loading="lazy"
     >
-  {{- with $caption -}}<figcaption class="text-sm text-center text-slate-500 dark:text-slate-300">{{ $caption | $.Page.RenderString }}</figcaption>{{- end }}
+  {{- with $caption -}}<figcaption class="text-sm text-center text-neutral-500 dark:text-neutral-300">{{ $caption | $.Page.RenderString }}</figcaption>{{- end }}
   </figure>
 {{- end -}}
 </div>

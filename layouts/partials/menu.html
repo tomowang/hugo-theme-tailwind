@@ -3,19 +3,19 @@
 {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
 {{ with site.Menus.main }}
 <nav class="h-full static">
-  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-slate-800 dark:text-slate-200 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
+  <button id="navbar-menu-toggle" type="button" class="inline-flex items-center p-2 text-sm text-neutral-800 dark:text-neutral-100 rounded-lg md:hidden" aria-controls="navbar-menu" aria-expanded="false">
     <span class="sr-only">{{ T "open_main_menu" }}</span>
     <i class="w-8 h-8">
       {{ partial "icon.html" "menu-2" }}
     </i>
   </button>
   <div class="absolute md:static top-16 left-0 right-0 z-50 hidden w-full md:block md:w-auto" id="navbar-menu">
-    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-slate-800 dark:text-slate-200 shadow-lg bg-white dark:bg-gray-600 shadow-slate-800/5 dark:shadow-slate-200/5 ring-1 ring-slate-900/5 dark:ring-slate-100/5">
+    <ul class="flex flex-col mx-2 md:mx-0 md:flex-row md:border-0 rounded-sm md:rounded-full px-3 text-base font-medium text-neutral-800 dark:text-neutral-100 shadow-lg bg-white dark:bg-neutral-600 shadow-neutral-800/5 dark:shadow-neutral-200/5 ring-1 ring-neutral-900/5 dark:ring-neutral-100/5">
     {{ range . }}
       {{- $isCurrent := or ($page.IsMenuCurrent .Menu .) ($page.HasMenuCurrent .Menu .) (and $page.IsHome (and .Page (eq $contentTypeName .Page.Type))) -}}
       {{ if not .HasChildren }}
         <li id="{{ .Identifier }}" class="">
-          <a class="block px-3 py-3 hover:text-emerald-600 {{- if $isCurrent }} text-emerald-600{{ end -}}"
+          <a class="block px-3 py-3 hover:text-neutral-100 {{- if $isCurrent }} text-neutral-100{{ end -}}"
             href="{{ .URL }}" title="{{ .Name }}">{{ .Name }}</a>
         </li>
       {{ end }}

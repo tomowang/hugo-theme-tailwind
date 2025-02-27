@@ -17,14 +17,14 @@
     <div class="flex flex-row">
       <section class="flex flex-col w-full md:w-2/3">
         {{ range (.Paginate $pages).Pages }}
-          <article class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-gray-700">
+          <article class="flex flex-col mt-6 mx-2 md:mx-0 rounded-lg overflow-hidden shadow-md bg-white dark:bg-neutral-700">
             <div>
               <a href="{{ .RelPermalink }}">
                 {{ partial "block/image.html" . }}
               </a>
             </div>
             <div class="flex flex-col gap-y-3 p-6">
-              <h2 class="text-4xl font-semibold text-slate-800 dark:text-slate-200">
+              <h2 class="text-4xl font-semibold text-neutral-800 dark:text-neutral-200">
                 <a href="{{ .RelPermalink }}">{{ .Title | .RenderString }}</a>
               </h2>
 

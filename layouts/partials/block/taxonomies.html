@@ -1,5 +1,13 @@
 {{ if (or .Params.categories .Params.tags) }}
   <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
+    {{ if .Params.draft }}
+      <li>
+        <span 
+          class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-yellow-400 text-black-50">
+          DRAFT
+        </a>
+      </li>
+    {{ end }}
     {{ if .Params.categories }}
       {{ range (.GetTerms "categories") }}
       <li>

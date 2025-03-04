@@ -13,7 +13,7 @@
   }
 
   const fuseOptions = {
-    distance: 99999,
+    ignoreLocation: true,
     includeScore: true,
     includeMatches: true,
     minMatchCharLength: searchOptions.minMatchCharLength,

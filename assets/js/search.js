@@ -13,6 +13,7 @@
   }
 
   const fuseOptions = {
+    ignoreLocation: true,
     includeScore: true,
     includeMatches: true,
     minMatchCharLength: searchOptions.minMatchCharLength,

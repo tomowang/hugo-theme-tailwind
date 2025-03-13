@@ -4,6 +4,13 @@
       <img class="h-12 w-12 rounded-full object-cover bg-gray-100" src="{{ .Site.Params.header.logo | relURL }}" alt="logo">
     </a>
   </div>
+  {{ if .Site.Params.header.title }}
+  <h1 class="hidden md:flex flex-col justify-center mx-2">
+    <a href="{{ relLangURL "" }}" class="text-2xl font-semibold text-slate-800 dark:text-slate-200">
+      {{ .Site.Params.header.title }}
+    </a>
+  </h1>
+  {{ end }}
   <div class="flex-1"></div>
   <div class="flex-none">
     {{ partial "menu.html" . }}

@@ -86,6 +86,7 @@ theme = "tailwind"
 
   [params.header]
     logo = "logo.webp"
+    title = ""
 
   [params.footer]
     since = 2023

@@ -16,6 +16,7 @@ showAuthor = true
 
 [header]
   logo = "logo.svg"
+  title = "Hugo Theme Tailwind"
 
 [footer]
   since = 2022

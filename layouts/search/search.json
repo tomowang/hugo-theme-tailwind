@@ -2,7 +2,19 @@
 {{- range .Site.Sites -}}
     {{- $pages := where .RegularPages "Params.hidden" "!=" true -}}
     {{- range $pages -}}
-        {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "content" .Plain "permalink" .Permalink) -}}
+        {{- $categories := slice -}}
+        {{- $tags := slice -}}
+        {{ if .Params.tags }}
+            {{ range (.GetTerms "tags") }}
+                {{- $tags = $tags  | append (dict "LinkTitle" .LinkTitle "RelPermalink" .RelPermalink) -}}
+            {{ end }}
+        {{ end }}
+        {{ if .Params.categories }}
+            {{ range (.GetTerms "categories") }}
+                {{- $categories = $categories  | append (dict "LinkTitle" .LinkTitle "RelPermalink" .RelPermalink) -}}
+            {{ end }}
+        {{ end }}
+        {{- $.Scratch.Add "index" (dict "title" .Title "tags" $tags "categories" $categories "content" .Plain "permalink" .Permalink) -}}
     {{- end -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

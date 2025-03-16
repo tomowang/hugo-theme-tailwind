@@ -52,19 +52,19 @@
     <ul class="flex flex-row flex-wrap text-slate-500 dark:text-slate-300">
       {{~ it.categories :v }}
       <li>
-        <span
+        <a href="{{! v.RelPermalink }}"
           class="text-sm mr-2 px-2 py-1 rounded border border-emerald-800 bg-emerald-800 text-slate-50">
-          {{!v}}
-        </span>
+          {{! v.LinkTitle }}
+        </a>
       </li>
       {{~}}
       {{~ it.tags :v }}
       <li>
-        <span
+        <a href="{{! v.RelPermalink }}"
           class="flex flex-row text-sm mr-2 py-1">
           {{= it.tagIcon }}
-          <span class="ml-0">{{!v}}</span>
-        </span>
+          <span class="ml-0">{{! v.LinkTitle }}</span>
+        </a>
       </li>
       {{~}}
     </ul>

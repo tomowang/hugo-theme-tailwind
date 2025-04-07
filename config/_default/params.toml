@@ -62,9 +62,9 @@ showAuthor = false
 
   [[social_media.items]]
     enabled = false
-    title = 'Twitter'
+    title = 'X'
     icon = 'brand-x'
-    link = 'https://twitter.com/__PurPleFoX__'
+    link = 'https://x.com/'
 
   [[social_media.items]]
     enabled = false

@@ -1,5 +1,5 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- range .Site.Sites -}}
+{{- range hugo.Sites -}}
     {{- $pages := where .RegularPages "Params.hidden" "!=" true -}}
     {{- range $pages -}}
         {{- $categories := slice -}}

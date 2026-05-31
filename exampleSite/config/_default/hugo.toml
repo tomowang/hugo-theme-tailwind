@@ -2,7 +2,7 @@ baseURL = "https://gohugo.io"
 title = "Hugo Theme Tailwind Example Site"
 copyright = "Xiaoliang Wang"
 pagination.pagerSize = 3 # for demonstration of pagination
-languageCode = "en"
+locale = "en"
 defaultContentLanguage = "en"
 enableInlineShortcodes = true
 # prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.

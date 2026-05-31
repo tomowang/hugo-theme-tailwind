@@ -73,7 +73,7 @@ title = "Hugo Theme Tailwind Example Site"
 author = "Your Name"
 copyright = "Your Name"
 pagination.pagerSize = 10
-languageCode = "en"
+locale = "en"
 theme = "tailwind"
 
 [markup]

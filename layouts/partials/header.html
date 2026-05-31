@@ -29,12 +29,12 @@
         {{- $page := . -}}
         {{ range .AllTranslations }}
           <li class="">
-            {{- if (ne $page.Language.LanguageCode .Language.LanguageCode) }}
+            {{- if (ne $page.Language.Locale .Language.Locale) }}
             <a class="block px-3 py-3 hover:text-emerald-600 cursor-pointer"
-              href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">{{ .Language.LanguageName }}
+              href="{{ .RelPermalink }}" title="{{ .Language.Label }}">{{ .Language.Label }}
             </a>
             {{- else }}
-            <span class="block px-3 py-3 cursor-default text-emerald-600">{{ .Language.LanguageName }}</span>
+            <span class="block px-3 py-3 cursor-default text-emerald-600">{{ .Language.Label }}</span>
             {{ end -}}
           </li>
         {{ end }}

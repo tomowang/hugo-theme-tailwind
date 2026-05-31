@@ -1,7 +1,7 @@
 [en]
-  languageCode = 'en-US'
-  languageDirection = 'ltr'
-  languageName = 'English'
+  locale = 'en-US'
+  direction = 'ltr'
+  label = 'English'
   weight = 1
   [en.menu]
   [[en.menu.main]]
@@ -17,9 +17,9 @@
     weight = 20
 
 [zh-cn]
-  languageCode = 'zh-CN'
-  languageDirection = 'ltr'
-  languageName = '中文'
+  locale = 'zh-CN'
+  direction = 'ltr'
+  label = '中文'
   weight = 2
   [zh-cn.menu]
   [[zh-cn.menu.main]]

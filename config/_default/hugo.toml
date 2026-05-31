@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 title = 'My New Hugo Site'
 copyright = ""
-languageCode = 'en'
+locale = 'en'
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 enableInlineShortcodes = true

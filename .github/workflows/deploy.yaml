@@ -31,7 +31,7 @@ defaults:
 jobs:
   # Build job
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3

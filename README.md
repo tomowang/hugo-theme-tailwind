@@ -126,8 +126,21 @@ Some of the configuration options are:
  * `params.search`: search settings
  * `params.author`: author used in the JSON-LD
  * `params.showAuthor`: show author name in article list and article page
+ * `params.showReadingTime`: show reading time in article list and article page
+ * `params.toc`: show table of contents in article page
  * `params.jsonLD`: enable or disable JSON-LD (default disabled)
  * `params.pwa`: enable or disable PWA (default disabled)
+
+`showAuthor`, `showReadingTime` and `toc` can also be set in a page's front matter
+to override the site-wide setting for that page, e.g.
+
+```yaml
+---
+title: "Contact"
+showReadingTime: false
+showAuthor: false
+---
+```
 
 For social media link data, you can refer entries in `params.social_media.items`
 (You can add more or disable existing entries in `params.social_media.items`).

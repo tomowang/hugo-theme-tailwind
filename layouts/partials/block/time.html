@@ -11,7 +11,7 @@
     </time>
   </div>
 {{ end -}}
-{{- if $.Site.Params.showReadingTime }}
+{{- if $.Param "showReadingTime" }}
   <div class="flex flex-row text-base gap-x-1">
     <i class="h-6 w-6 flex-none">
       {{ partial "icon.html" "hourglass-high" }}

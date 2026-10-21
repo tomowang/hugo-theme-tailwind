@@ -10,11 +10,15 @@ contentTypeName = "posts"
 # Alternatively, add this param to post front matter for specific posts
 toc = true
 
+# Show reading time in article list and article page
+# Can be overridden per page in front matter (e.g. `showReadingTime = false`)
 showReadingTime = true
 
 # use structure json-ld for articles
 jsonLD = false
 
+# Show author name in article list and article page
+# Can be overridden per page in front matter (e.g. `showAuthor = false`)
 showAuthor = false
 
 [author]
